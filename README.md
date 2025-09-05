@@ -1,2 +1,2 @@
-# hw
-Hello world public repo
+# Hello world
+Access testing only. To be deleted.
