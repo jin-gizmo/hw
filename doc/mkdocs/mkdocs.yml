@@ -27,7 +27,6 @@ use_directory_urls: false
 
 
 
-repo_url: https://github.com/jin-gizmo/docma
 site_description: Document manufacture for fun and profit
-copyright: Origin Energy
+copyright: (C) Origin Energy
 remote_branch: gh-pages
