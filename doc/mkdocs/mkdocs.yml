@@ -1,0 +1,25 @@
+extra_css:
+- css/extra.css
+markdown_extensions:
+- codehilite:
+    guess_lang: false
+    linenums: false
+    use_pygments: false
+nav:
+- Overview: 01-overview.md
+- Document Creation: 02-document-creation.md
+- Document Templates: 03-document-templates.md
+- Docma Template Compilation: 04-docma-template-compilation.md
+- Docma Template Rendering: 05-docma-template-rendering.md
+- Charts and Graphs in Docma: 06-charts-and-graphs-in-docma.md
+- Data Sources in Docma: 07-data-sources-in-docma.md
+- Fonts: 08-fonts.md
+- Installation and Usage: 09-installation-and-usage.md
+- Caveats and Known Issues: 10-caveats-and-known-issues.md
+- Credits: 11-credits.md
+- Release Notes: 12-release-notes.md
+site_author: Murray Andrews
+site_name: Docma User Guide
+site_url: ''
+theme: readthedocs
+use_directory_urls: false
