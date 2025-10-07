@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Murray Andrews" />
+      <link rel="shortcut icon" href="img/favicon.ico" />
+    <title>Data Sources in Docma - Docma User Guide</title>
+    <link rel="stylesheet" href="css/theme.css" />
+    <link rel="stylesheet" href="css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="css/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Data Sources in Docma";
+        var mkdocs_page_input_path = "07-data-sources-in-docma.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="." class="icon icon-home"> Docma User Guide
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="01-overview.html">Overview</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="02-document-creation.html">Document Creation</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="03-document-templates.html">Document Templates</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="04-docma-template-compilation.html">Docma Template Compilation</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="05-docma-template-rendering.html">Docma Template Rendering</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="06-charts-and-graphs-in-docma.html">Charts and Graphs in Docma</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Data Sources in Docma</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#data-source-specifications">Data Source Specifications</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#data-source-specifications-for-charts">Data Source Specifications for Charts</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#data-source-specifications-for-html-rendering">Data Source Specifications for HTML Rendering</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#query-specifications">Query Specifications</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#query-text">Query Text</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#query-parameters">Query Parameters</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#query-schemas">Query Schemas</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#data-provider-types">Data Provider Types</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#data-provider-type-duckdb">Data Provider Type: duckdb</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#examples">Examples</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#data-provider-type-file">Data Provider Type: file</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#examples_1">Examples</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#data-provider-type-lava">Data Provider Type: lava</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#examples_2">Examples</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#data-provider-type-params">Data Provider Type: params</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#examples_3">Examples</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#data-provider-type-postgres">Data Provider Type: postgres</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#examples_4">Examples</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="08-fonts.html">Fonts</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="09-installation-and-usage.html">Installation and Usage</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="10-caveats-and-known-issues.html">Caveats and Known Issues</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="11-credits.html">Credits</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="12-release-notes.html">Release Notes</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href=".">Docma User Guide</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Data Sources in Docma</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="data-sources-in-docma">Data Sources in Docma</h1>
+<p>Docma can access data files and live data sources during the rendering phase.
+This is done by the <em>data provider</em> subsystem.
+The returned data can be used in the following ways:</p>
+<ul>
+<li>
+<p>Source data for <a href="#data-source-specifications-for-charts">charts and graphs</a>.</p>
+</li>
+<li>
+<p>Injection into the Jinja rendering process for
+    <a href="#data-source-specifications-for-html-rendering">HTML content</a> (e.g. for
+    tables or other variable content).</p>
+</li>
+</ul>
+<p>Data providers return their data as a list of objects, one row of data per
+object.</p>
+<blockquote>
+<p>Be careful with dataset sizes. This interface is not designed for very large
+amounts of data. Do as much data preparation / reduction outside of docma as
+possible (e.g. via database queries to generate just the essential data).</p>
+</blockquote>
+<h2 id="data-source-specifications">Data Source Specifications</h2>
+<p>Docma uses the concept of <strong>data source specifications</strong> to control the process
+of obtaining the data and what to do with it. They contain the following
+components.</p>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>type</td>
+<td>The <a href="#data-provider-types">data provider type</a> (e.g. <code>file</code> if the data comes from a file). This controls the connection / access mechanism.</td>
+</tr>
+<tr>
+<td>location</td>
+<td>Where to find the data. For a file based source it would be the path to the file. For a database provider, it would point to the connection information for the database.</td>
+</tr>
+<tr>
+<td>query</td>
+<td>The file name in the document template containing a <a href="#query-specifications">query specification</a> that defines a query to execute on the data provider. This is required for database-like sources. It is not used for some data provider types.</td>
+</tr>
+<tr>
+<td>target</td>
+<td>For charts, the position in the Vega-Lite specification where the data will be attached. This is a dot separated dictionary key sequence pointing into the chart specification. If not provided, this defaults to <code>data.values</code>, which is the primary data location for a Vega-Lite specification.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="data-source-specifications-for-charts">Data Source Specifications for Charts</h3>
+<p>The HTML to include a chart is of the form:</p>
+<pre><code class="language-html">&lt;IMG src=&quot;docma:vega?spec=charts/my-chart.yaml&amp;data=...&quot;&gt;
+</code></pre>
+<p>The value of the <code>data</code> parameter is a docma
+<a href="#data-source-specifications">data source specification</a>
+expressed in string form, like so:</p>
+<pre><code class="language-bare">data=type;location[;query[;target]
+</code></pre>
+<blockquote>
+<p>Why jam all this together into a single URL parameter rather than have
+separate parameters for each component? The reason is
+because a Vega-Lite chart can have multiple data sources and hence multiple
+instances of the <code>data</code> parameter.</p>
+</blockquote>
+<p>It can be fiddly combining all these components in a URL in a readable way. The
+recommended approach is to use Jinja to assemble all the pieces and handle the
+gory details of URL encoding, like so:</p>
+<pre><code class="language-html">&lt;IMG style=&quot;width: 10cm;&quot; src=docma:vega?{{
+  (
+    ( 'spec', 'charts/my-chart.yaml' ),
+    ( 'data', 'file;data/my-data.csv' ),
+    ( 'data', 'file;data/more-data.csv;;datasets.more_data' ),
+    (
+      'data', (
+        'postgres', 'pgdb01', 'queries/usage-by-day.yaml', 'datasets.usage_by_day'
+      ) | join(';'),
+    ),
+  ) | urlencode
+}}&quot;&gt;
+</code></pre>
+<p>In this example, three data sets are specified:</p>
+<ol>
+<li>
+<p>The first one is extracted from a local CSV file and attached to the chart
+    specification at the default location of <code>data.values</code> (i.e the <code>values</code>
+    object under the <code>data</code> object is replaced with our CSV data).</p>
+</li>
+<li>
+<p>The second one is extracted from a local CSV file and attached to the chart
+    specification as the <code>datasets.more_data</code> object in the specification. Note
+    that the unused <code>query</code> component must be provided as an empty string to ensure the
+    <code>target</code> component is correctly placed.</p>
+</li>
+<li>
+<p>The third one is extracted by running a query against a Postgres database
+    and attached to the chart specification as the <code>datasets.usage_by_day</code>
+    object in the specification.</p>
+</li>
+</ol>
+<h3 id="data-source-specifications-for-html-rendering">Data Source Specifications for HTML Rendering</h3>
+<p>A data source specification can be invoked directly in Jinja content within a
+document that is to be rendered. </p>
+<p>This is done using the <code>docma.data()</code> function provided in the <a href="05-docma-template-rendering.html#jinja-rendering-parameters-provided-by-docma">run-time
+rendering parameters</a>. It accepts
+three arguments corresponding to the first three components of a <a href="#data-source-specifications">data source
+specification</a>:</p>
+<ul>
+<li>type </li>
+<li>location</li>
+<li>query (optional).</li>
+</ul>
+<p>The <code>docma.data()</code> function also accepts an optional <code>params</code> argument which is
+a dictionary of additional parameter values that will be merged into the Jinja
+rendering parameters when rendering the
+<a href="#query-specifications">query specification</a>.</p>
+<p>See also <a href="05-docma-template-rendering.html#jinja-rendering-parameters-provided-by-docma">Jinja Rendering Parameters Provided by
+Docma</a>.</p>
+<p>For example, the following document content invokes the
+<a href="#data-provider-type-postgres">postgres</a> data provider to run a query on the
+Custard Appreciation Society membership records and present the data in a table.</p>
+<pre><code class="language-html">&lt;TABLE&gt;
+  &lt;THEAD&gt;
+  &lt;TR&gt;
+    &lt;TH&gt;Custard Type&lt;/TH&gt;
+    &lt;TH&gt;Bid Price&lt;/TH&gt;
+  &lt;/TR&gt;
+  &lt;/THEAD&gt;
+  &lt;TBODY&gt;
+  {% for row in docma.data('postgres', 'pgdb01', 'queries/custard-price.yaml') %}
+    &lt;TR&gt;
+      &lt;TD&gt;{{ row.favouritecustard }}&lt;/TD&gt;
+      &lt;TD&gt;{{ row.price | dollars(2) }}&lt;/TD&gt;
+    &lt;/TR&gt;
+  {% endfor %}
+  &lt;/TBODY&gt;
+&lt;/TABLE&gt;
+&lt;/BODY&gt;
+&lt;/HTML&gt;
+</code></pre>
+<p>If a query only returns a single row, that would be referenced like so:</p>
+<pre><code class="language-jinja">{{ docma.data(...)[0] }}
+</code></pre>
+<p>... or ...</p>
+<pre><code class="language-jinja">{{ docma.data(...) | first }}
+</code></pre>
+<h2 id="query-specifications">Query Specifications</h2>
+<p>Some data providers require a query to be specified to extract the data. In
+docma, this is done using a <strong>query specification</strong>.</p>
+<p>A query specification is a YAML formatted file in the document template. It is
+referenced as the third element of a
+<a href="#data-source-specifications">data source specification</a>. These should be placed
+in the <code>queries</code> directory in the template.</p>
+<p>Docma thus externalises all database queries into a single, visible collection
+rather than embedding them in random places within the template document
+components.</p>
+<p>A query specification file contains the DML of the query to be executed as well
+as information on how to handle query parameters. It contains the following
+keys:</p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>description</td>
+<td>String</td>
+<td>Yes</td>
+<td>A description for human consumption. Not used by docma.</td>
+</tr>
+<tr>
+<td>options</td>
+<td>Object</td>
+<td>No</td>
+<td>Query control options.</td>
+</tr>
+<tr>
+<td>--&gt; fold_headers</td>
+<td>Boolean</td>
+<td>No</td>
+<td>Convert all headers to lowercase (prior to row validation). This is sometimes necessary as different database drivers can handle the case treatment of headers in different ways. The default is <code>false</code>.</td>
+</tr>
+<tr>
+<td>--&gt; row_limit</td>
+<td>Integer</td>
+<td>No</td>
+<td>Abort if the query returns more than the specified number of rows. This is a safety mechanism. The default is 0, meaning no limit is applied.</td>
+</tr>
+<tr>
+<td>parameters</td>
+<td>List</td>
+<td>No</td>
+<td>A list of <a href="#query-parameters">query parameter specification</a> objects. If empty, the query has no parameters (which would be unusual). The parameter values are Jinja rendered using the run-time rendering parameters.</td>
+</tr>
+<tr>
+<td>query</td>
+<td>String</td>
+<td>Yes</td>
+<td>The <a href="#query-text">query text</a>. This will be Jinja rendered using the run-time rendering parameters.</td>
+</tr>
+<tr>
+<td>schema</td>
+<td>Object</td>
+<td>No</td>
+<td>A JSON Schema specification for each row of data returned by the query. See <a href="#query-schemas">Query Schemas</a> below.</td>
+</tr>
+</tbody>
+</table>
+<p>Here's a sample:</p>
+<pre><code class="language-yaml">description: Extract Custard Appreciation Society membership records
+
+query: &gt;-
+  SELECT * FROM &quot;{{ db.schema | sql_safe }}&quot;.custard
+  WHERE favouritecustard=%s
+    AND custardbidprice &gt; %s
+    AND custardjedi=%s;
+  SORT BY surname;
+
+parameters:
+  - name: favouritecustard
+    value: '{{ db.favouritecustard }}'
+  - name: custardbidprice
+    value: '{{ db.custardbidprice }}'
+    type: decimal
+  - name: custardjedi
+    value: '{{ db.custardjedi }}'
+    type: boolean
+
+options:
+  row_limit: 20
+  fold_headers: true
+</code></pre>
+<h3 id="query-text">Query Text</h3>
+<p>The query itself is pretty vanilla (ha!) SQL with some notable exceptions.</p>
+<p><strong>Firstly,</strong> the query text will be Jinja rendered with the docma run-time rendering
+parameters. This makes it easy to do things such as switching schemas without
+having to alter the document template. (This is close to impossible in some
+popular analytics platforms that shall remain nameless.)</p>
+<blockquote>
+<p>It is probably best not to embed data source specification references within a
+query specification (i.e. recursive calls to the data provider subsystem).
+Don't cross the streams.</p>
+</blockquote>
+<p>Care is required to avoid SQL injection risks. In the example above, the schema
+is quoted and also filtered using the docma specific
+<a href="05-docma-template-rendering.html#custom-jinja-filters-provided-by-docma">sql_safe</a> Jinja filter. This filter
+will abort if the value contains something unsafe.</p>
+<p><strong>Secondly,</strong> the values for query parameters are replaced with placeholders. The
+actual values are determined at run-time from the parameter specifications. The
+placeholder is database driver specific unfortunately, based on the
+<a href="https://peps.python.org/pep-0249/#paramstyle">paramstyle</a>
+it uses. The <code>pg8000</code> driver used for Postgres uses <code>%s</code> style, whereas DuckDB
+uses <code>?</code>. It's not my fault.</p>
+<blockquote>
+<p><strong>DO NOT</strong> attempt to use Jinja to format query parameters into the SQL text
+itself. This is seriously unsafe. Use
+<a href="#query-parameters">query parameter specifications</a>.</p>
+</blockquote>
+<p><strong>Thirdly,</strong> when the data is to be used in a <a href="06-charts-and-graphs-in-docma.html#charts-and-graphs-in-docma">Vega-Lite
+chart</a>, all of the data returned by the query needs
+to be JSON serialisable. i.e.  Python types such as <code>datetime</code>, <code>Decimal</code> etc
+will be a problem. The query should type cast everything to types that can be
+JSON serialised. For example:</p>
+<pre><code class="language-sql">-- This will not work ...
+SELECT date_of_birth as dob, height_in_cm as height
+FROM people;
+
+-- This will work (Postgres syntax) ...
+SELECT date_of_birth::text as dob, height_in_cm::float as height
+FROM people;
+</code></pre>
+<h3 id="query-parameters">Query Parameters</h3>
+<p>Query parameters are specified as a list of query parameter specification objects.
+These contain the following keys:</p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>name</td>
+<td>String</td>
+<td>Yes</td>
+<td>The parameter name. This is used for database drivers that support <code>named</code> and <code>pyformat</code> <a href="https://peps.python.org/pep-0249/#paramstyle">paramstyles</a>. It is mandatory for all parameters for maintainability.</td>
+</tr>
+<tr>
+<td>value</td>
+<td>String</td>
+<td>Yes</td>
+<td>The parameter value. In many cases this will be a Jinja value injection construct.</td>
+</tr>
+<tr>
+<td>type</td>
+<td>String</td>
+<td>No</td>
+<td>A type indicator. Docma uses this to cast the value to the specified type. Only the following are supported: <code>str</code> / <code>string</code>, <code>int</code> / <code>integer</code>, <code>float</code>, <code>decimal</code>, <code>bool</code> / <code>boolean</code>. The default is <code>string</code>. Alternatively, cast string values within the DML.</td>
+</tr>
+</tbody>
+</table>
+<p>These are supplied to the query at run-time using the DBAPI 2.0 driver's
+query parameter mechanism to avoid SQL injection risks.</p>
+<h3 id="query-schemas">Query Schemas</h3>
+<p>In some situations, it may be important to validate that the data returned by a
+query meets certain conditions and to abort document production if it does
+not. This can be achieved by including a <code>schema</code> object in the <a href="#query-specifications">query 
+specification</a>.</p>
+<blockquote>
+<p>The data preparation process should take proper care to ensure valid data.
+Query Schemas are the last line of defence against bad data appearing in
+documents.</p>
+</blockquote>
+<p>The <code>schema</code> object is a JSON Schema specification that is used to validate each
+row of data. Validation failures will abort the process. Note that all rows are
+returned as objects with keys based on the column names in the query.</p>
+<p>For example, consider the following query specification:</p>
+<pre><code class="language-yaml">description: Get company information.
+
+query: &gt;-
+  SELECT name, age_in_years, abn
+  FROM companies;
+
+# This schema will validate each row. We don't have to
+# validate every attribute in a row. Just the ones we're
+# worried about.
+schema:
+  type: object  # It's always one object per row of data
+  properties:
+    age_in_years:
+      type: number
+      minimum: 0
+      maximum: 200
+    abn:
+      type: string
+      format: au.ABN  # This is a docma provided format checker
+</code></pre>
+<p>In addition to the standard format specifiers supported by JSON Schema, the
+<a href="05-docma-template-rendering.html#format-checkers-provided-by-docma">format checkers provided by
+docma</a> are available for <code>string</code> objects.</p>
+<h2 id="data-provider-types">Data Provider Types</h2>
+<blockquote>
+<p>The data provider interface is readily extensible to add new data sources.
+See <a href="09-installation-and-usage.html#data-providers">Data Providers</a>.</p>
+</blockquote>
+<h3 id="data-provider-type-duckdb">Data Provider Type: duckdb</h3>
+<p>Docma can read data from a local file containing a <a href="https://duckdb.org">DuckDB</a>
+database.</p>
+<p>The DuckDB data provider is a useful mechanism for handling data extracts with
+docma. Docma, running on a DuckDB data extract can be quite fast, even with
+moderately large datasets.</p>
+<blockquote>
+<p>Why DuckDB rather than, for example, SQLite? DuckDB has a much more complete
+SQL implementation than SQLite, and one which is much closer to Postgres. It
+also has a very powerful and flexible mechanism for accessing data from other
+sources (files in various formats, AWS S3 etc.). And it goes like the clappers.</p>
+</blockquote>
+<p>The <code>type</code> component of the <a href="#data-sources-in-docma">data source specification</a>
+is <code>duckdb</code>.</p>
+<p>The <code>location</code> component is the name of a local file (not a template file)
+containing the database.</p>
+<p>The <code>query</code> component is the name of a
+<a href="#query-specifications">query specification</a> file.</p>
+<h4 id="examples">Examples</h4>
+<p>This example shows a DuckDB database being used to supply data to a chart (using Jinja tuple notation):</p>
+<pre><code class="language-html">&lt;IMG
+    style=&quot;width: 10cm;&quot;
+    src=&quot;docma:vega?{{ (
+        ( 'spec', 'charts/dog-woof-power-chart.yaml' ),
+        ( 'data', 'duckdb;/tmp/demo/dogs.db;queries/woof-power.yaml' ),
+    ) | urlencode }}&quot;
+&gt;
+</code></pre>
+<p>This example shows a DuckDB database being used to populate an HTML table:</p>
+<pre><code class="language-html">&lt;TABLE&gt;
+  &lt;THEAD&gt;
+  &lt;TR&gt;
+    &lt;TH&gt;Dog&lt;/TH&gt;
+    &lt;TH class=&quot;Woof&quot;&gt;Woof&lt;/TH&gt;
+  &lt;/TR&gt;
+  &lt;/THEAD&gt;
+  &lt;TBODY&gt;
+  {% for row in docma.data('duckdb', '/tmp/demo/dogs.db', 'queries/woof-power.yaml') %}
+  &lt;TR&gt;
+    &lt;TD class=&quot;Dog&quot;&gt;{{ row.Dog }}&lt;/TD&gt;
+    &lt;TD class=&quot;Woof&quot;&gt;{{ row.Woof }}&lt;/TD&gt;
+  &lt;/TR&gt;
+  {% endfor %}
+  &lt;/TBODY&gt;
+&lt;/TABLE&gt;
+</code></pre>
+<h3 id="data-provider-type-file">Data Provider Type: file</h3>
+<p>Docma can read data from static files contained within the compiled document
+template.</p>
+<p>The <code>type</code> component of the <a href="#data-sources-in-docma">data source specification</a>
+is <code>file</code>.</p>
+<p>The <code>location</code> component is the name of the file, relative to the root of the
+template. Handling is determined based on the file suffix. The following formats
+are supported:</p>
+<table>
+<thead>
+<tr>
+<th>File Suffix</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>csv</td>
+<td>A CSV file with a header line. The excel dialect is assumed.</td>
+</tr>
+<tr>
+<td>jsonl</td>
+<td>A file containing one JSON formatted object per line.</td>
+</tr>
+</tbody>
+</table>
+<p>The <code>query</code> component is not used.</p>
+<h4 id="examples_1">Examples</h4>
+<p>This example shows a CSV file being used to supply data to a chart (using Jinja tuple notation):</p>
+<pre><code class="language-html">&lt;IMG
+    style=&quot;width: 10cm; justify-self: start;&quot;
+    src=&quot;docma:vega?{{ (
+          ( 'spec', 'charts/woof.yaml'),
+          ( 'data', 'file;data/dogs.csv'),
+        ) | urlencode }}&quot;
+&gt;
+</code></pre>
+<p>This example shows a CSV file being used to populate an HTML table:</p>
+<pre><code class="language-html">&lt;TABLE&gt;
+  &lt;THEAD&gt;
+  &lt;TR&gt;
+    &lt;TH&gt;Dog&lt;/TH&gt;
+    &lt;TH class=&quot;Woof&quot;&gt;Woof&lt;/TH&gt;
+  &lt;/TR&gt;
+  &lt;/THEAD&gt;
+  &lt;TBODY&gt;
+  {% for row in docma.data('file', 'data/dogs.csv', 'queries/woof-power.yaml') %}
+  &lt;TR&gt;
+    &lt;TD class=&quot;Dog&quot;&gt;{{ row.Dog }}&lt;/TD&gt;
+    &lt;TD class=&quot;Woof&quot;&gt;{{ row.Woof }}&lt;/TD&gt;
+  &lt;/TR&gt;
+  {% endfor %}
+  &lt;/TBODY&gt;
+&lt;/TABLE&gt;
+</code></pre>
+<p>In the example above, the csv file (<code>data/dogs.csv</code>) might look something like this:</p>
+<pre><code class="language-bare">Dog,Woof
+Bolliver,28
+Rin Tin Tin,55
+Fido,43
+Kipper,91
+Zoltan,81
+Pluto,53
+Scooby,24
+Cerberus,87
+Snoopy,52
+</code></pre>
+<h3 id="data-provider-type-lava">Data Provider Type: lava</h3>
+<p>If the lava package is <a href="09-installation-and-usage.html#installing-docma">installed</a>, docma can use the lava
+connection subsystem to read data from a database. Lava provides support for
+connecting to a range of database types, including Postgres, Redshift, SQL
+Server, MySQL and Oracle. It also manages all of the connection details,
+credentials etc.</p>
+<p>The <code>type</code> component of the data source specification is <code>lava</code>.</p>
+<p>The <code>location</code> component is a lava connection ID for a database.</p>
+<p>The <code>query</code> component is the name of a
+<a href="#query-specifications">query specification</a> file.</p>
+<p>The lava realm must be specified during rendering, either by setting the
+<code>LAVA_REALM</code> environment variable, or via the <code>--realm</code> argument to the CLI.</p>
+<blockquote>
+<p>The <a href="#query-text">query text</a> must use a
+<a href="https://peps.python.org/pep-0249/#paramstyle">paramstyle</a> that matches the
+underlying driver being used by lava. Refer to the lava user guide for more
+information.</p>
+</blockquote>
+<h4 id="examples_2">Examples</h4>
+<p>This example shows a lava database connector (ID=<code>redshift/prod</code>) being used to supply data to a chart (using Jinja tuple notation):</p>
+<pre><code class="language-html">&lt;IMG
+    style=&quot;width: 10cm;&quot;
+    src=&quot;docma:vega?{{ (
+        ( 'spec', 'charts/dog-woof-power-chart.yaml' ),
+        ( 'data', 'lava;redshift/prod;queries/woof-power.yaml' ),
+    ) | urlencode }}&quot;
+&gt;
+</code></pre>
+<p>This example shows a lava database connector (ID=<code>redshift/prod</code>) being used to populate an HTML table:</p>
+<pre><code class="language-html">&lt;TABLE&gt;
+  &lt;THEAD&gt;
+  &lt;TR&gt;
+    &lt;TH&gt;Dog&lt;/TH&gt;
+    &lt;TH class=&quot;Woof&quot;&gt;Woof&lt;/TH&gt;
+  &lt;/TR&gt;
+  &lt;/THEAD&gt;
+  &lt;TBODY&gt;
+  {% for row in docma.data('lava', 'redshift/prod', 'queries/woof-power.yaml') %}
+  &lt;TR&gt;
+    &lt;TD class=&quot;Dog&quot;&gt;{{ row.Dog }}&lt;/TD&gt;
+    &lt;TD class=&quot;Woof&quot;&gt;{{ row.Woof }}&lt;/TD&gt;
+  &lt;/TR&gt;
+  {% endfor %}
+  &lt;/TBODY&gt;
+&lt;/TABLE&gt;
+</code></pre>
+<h3 id="data-provider-type-params">Data Provider Type: params</h3>
+<p>Docma can extract data from a list of objects in the rendering parameters.</p>
+<p>The <code>type</code> component of the <a href="#data-sources-in-docma">data source specification</a>
+is <code>params</code>.</p>
+<p>The <code>location</code>  component is a dot separated key sequence
+to select a data list within the parameters. Each element of the list must be
+an object (not a string).</p>
+<p>The <code>query</code> component is not used.</p>
+<h4 id="examples_3">Examples</h4>
+<p>Consider the following rendering parameters:</p>
+<pre><code class="language-yaml">param1: value1
+param2: value2
+
+data:
+  custard:
+    prices:
+      - type: lumpy
+        price: 1.53
+      - type: baked
+        price: 2.84
+      - type: runny
+        price: 3.50
+</code></pre>
+<p>A data source specification of <code>params;data.custard.prices</code> would return the
+following data rows:</p>
+<pre><code class="language-json">{ &quot;type&quot;: &quot;lumpy&quot;, &quot;price&quot;: 1.53 }
+{ &quot;type&quot;: &quot;baked&quot;, &quot;price&quot;: 2.84 }
+{ &quot;type&quot;: &quot;runny&quot;, &quot;price&quot;: 3.5 }
+</code></pre>
+<p>This example shows rendering parameters being used to supply data to a chart (using Jinja tuple notation):</p>
+<pre><code class="language-html">&lt;IMG
+    style=&quot;width: 10cm;&quot;
+    src=&quot;docma:vega?{{ (
+        ( 'spec', 'charts/custard-prices-chart.yaml' ),
+        ( 'data', 'params;data.custard.prices' ),
+    ) | urlencode }}&quot;
+&gt;
+</code></pre>
+<p>This example shows rendering parameters being used to populate an HTML table:</p>
+<pre><code class="language-html">&lt;TABLE&gt;
+  &lt;THEAD&gt;
+  &lt;TR&gt;
+    &lt;TH&gt;Custard Type&lt;/TH&gt;
+    &lt;TH class=&quot;price&quot;&gt;Price&lt;/TH&gt;
+  &lt;/TR&gt;
+  &lt;/THEAD&gt;
+  &lt;TBODY&gt;
+  {% for row in docma.data('params', 'data.custard.prices') %}
+  &lt;TR&gt;
+    &lt;TD class=&quot;type&quot;&gt;{{ row.type }}&lt;/TD&gt;
+    &lt;TD class=&quot;price&quot;&gt;{{ row.price }}&lt;/TD&gt;
+  &lt;/TR&gt;
+  {% endfor %}
+  &lt;/TBODY&gt;
+&lt;/TABLE&gt;
+</code></pre>
+<h3 id="data-provider-type-postgres">Data Provider Type: postgres</h3>
+<p>Docma can read data from a Postgres database.</p>
+<p>The <code>type</code> component of the <a href="#data-sources-in-docma">data source specification</a>
+is <code>postgres</code>.</p>
+<p>The <code>location</code> component is an alpha-numeric label for the database. This is
+used to determine connection details from environment variables or the contents
+of a <code>.env</code> file.</p>
+<p>If the <code>location</code> component is <code>xyz</code>, then docma will read the following values
+from a <code>.env</code> file to connect to the database.</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>XYZ_USER</td>
+<td>Database user name</td>
+</tr>
+<tr>
+<td>XYZ_PASSWORD</td>
+<td>Password. Exactly one of <code>XYZ_PASSWORD</code> and <code>XYZ_PASSWORD_PARAM</code> must be specified.</td>
+</tr>
+<tr>
+<td>XYZ_PASSWORD_PARAM</td>
+<td>AWS SSM parameter containing the password.</td>
+</tr>
+<tr>
+<td>XYZ_HOST</td>
+<td>Host name</td>
+</tr>
+<tr>
+<td>XYZ_PORT</td>
+<td>Port number</td>
+</tr>
+<tr>
+<td>XYZ_DATABASE</td>
+<td>Database name</td>
+</tr>
+<tr>
+<td>XYZ_SSL</td>
+<td>A truthy value specifying if SSL should be enforced (default <code>no</code>)</td>
+</tr>
+</tbody>
+</table>
+<p>Values can also be overridden by environment variables with the same names as
+above, prefixed with <code>DOCMA_</code>. e.g. <code>DOCMA_XYZ_USER</code>.</p>
+<blockquote>
+<p>Take care to ensure the <code>.env</code> file is excluded from any GIT repo. A redacted
+sample is provided in the <code>test</code> directory.</p>
+</blockquote>
+<p>The <code>query</code> component is the name of a
+<a href="#query-specifications">query specification</a> file.</p>
+<h4 id="examples_4">Examples</h4>
+<p>This example shows a Postgres database being used to supply data to a chart (using Jinja tuple notation):</p>
+<pre><code class="language-html">&lt;IMG
+    style=&quot;width: 10cm;&quot;
+    src=&quot;docma:vega?{{ (
+        ( 'spec', 'charts/dog-woof-power-chart.yaml' ),
+        ( 'data', 'postgres;prod01;queries/woof-power.yaml' ),
+    ) | urlencode }}&quot;
+&gt;
+</code></pre>
+<p>This example shows a Postgres database being used to populate an HTML table:</p>
+<pre><code class="language-html">&lt;TABLE&gt;
+  &lt;THEAD&gt;
+  &lt;TR&gt;
+    &lt;TH&gt;Dog&lt;/TH&gt;
+    &lt;TH class=&quot;Woof&quot;&gt;Woof&lt;/TH&gt;
+  &lt;/TR&gt;
+  &lt;/THEAD&gt;
+  &lt;TBODY&gt;
+  {% for row in docma.data('postgres', 'prod01', 'queries/woof-power.yaml') %}
+  &lt;TR&gt;
+    &lt;TD class=&quot;Dog&quot;&gt;{{ row.Dog }}&lt;/TD&gt;
+    &lt;TD class=&quot;Woof&quot;&gt;{{ row.Woof }}&lt;/TD&gt;
+  &lt;/TR&gt;
+  {% endfor %}
+  &lt;/TBODY&gt;
+&lt;/TABLE&gt;
+</code></pre>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="06-charts-and-graphs-in-docma.html" class="btn btn-neutral float-left" title="Charts and Graphs in Docma"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="08-fonts.html" class="btn btn-neutral float-right" title="Fonts">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="06-charts-and-graphs-in-docma.html" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="08-fonts.html" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = ".";</script>
+    <script src="js/theme_extra.js"></script>
+    <script src="js/theme.js"></script>
+      <script src="search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
