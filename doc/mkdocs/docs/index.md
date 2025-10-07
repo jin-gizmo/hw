@@ -1,7 +1,7 @@
 
 # Docma User Guide
 
-#### Version 0.0.0
+#### Version 0.0.1
 
 **Docma** is a PDF document generator that can assemble and compose PDF and HTML documents
 from document templates with dynamic content.

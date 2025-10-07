@@ -25,8 +25,6 @@ site_url: ''
 theme: readthedocs
 use_directory_urls: false
 
-
-
 site_description: Document manufacture for fun and profit
-copyright: (C) Origin Energy
+copyright: "&copy; Origin Energy"
 remote_branch: gh-pages
