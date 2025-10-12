@@ -13,10 +13,10 @@
       
       
       
-        <link rel="prev" href="01-overview.html">
+        <link rel="prev" href="12-caveats-and-issues.html">
       
       
-        <link rel="next" href="03-document-templates.html">
+        <link rel="next" href="14-release-notes.html">
       
       
       <link rel="icon" href="img/docma-logo/png/docma-icon-light.png">
@@ -24,7 +24,7 @@
     
     
       
-        <title>Document Creation - Docma User Guide</title>
+        <title>Credits - Docma User Guide</title>
       
     
     
@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#document-creation" class="md-skip">
+        <a href="#credits" class="md-skip">
           Skip to content
         </a>
       
@@ -115,7 +115,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Document Creation
+              Credits
             
           </span>
         </div>
@@ -265,19 +265,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="02-document-creation.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="02-document-creation.html" class="md-nav__link">
         
   
   
@@ -288,7 +279,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -495,10 +485,19 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="13-credits.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="13-credits.html" class="md-nav__link md-nav__link--active">
         
   
   
@@ -509,6 +508,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -569,30 +569,34 @@
 
 
 
-<h1 id="document-creation">Document Creation<a class="headerlink" href="#document-creation" title="Permanent link">&para;</a></h1>
-<p>The docma document creation process consists of these steps:</p>
-<ol>
+<h1 id="credits">Credits<a class="headerlink" href="#credits" title="Permanent link">&para;</a></h1>
+<p>Thanks to MenaG for inspiring this idea in the first place and for having faith
+that it was worth the bother.</p>
+<p>Thanks to Alex Boul, and Art Dorokhov for contributing to <strong>docma</strong>.</p>
+<p><strong>Docma</strong> is possible because of these amazing Python packages:</p>
+<ul>
 <li>
-<p><a href="03-document-templates.html#document-templates">Document template creation</a>: The template content is
-    contained in a directory dedicated to a single template. It contains the
-    static content (e.g. HTML, PDF, Markdown and image files) as well as YAML
-    formatted metadata files that control the rendering process, database access
-    etc.</p>
+<p><a href="https://weasyprint.org">WeasyPrint</a></p>
 </li>
 <li>
-<p><a href="04-template-compilation.html#docma-template-compilation">Template compilation</a>: The compilation process
-    validates the template content, converts supported non-HTML content (e.g.
-    Markdown files) into HTML and generates a compiled template package
-    in either a directory or ZIP file.</p>
+<p><a href="https://jinja.palletsprojects.com/en/">Jinja2</a></p>
 </li>
 <li>
-<p><a href="05-template-rendering.html#docma-template-rendering">Template rendering</a>: The rendering process
-    uses Jinja to inject run-time parameters into the HTML template content,
-    converts the component documents to PDF, if required, and composes all of
-    the components into a single output PDF or standalone HTML document.</p>
+<p><a href="https://altair-viz.github.io/index.html">Vega-Altair</a></p>
 </li>
-</ol>
-<p><img alt="" src="img/docma-high-level.svg" /></p>
+<li>
+<p><a href="https://pypdf.readthedocs.io/en/stable/">PyPDF</a></p>
+</li>
+</ul>
+<p>Honourable mentions:</p>
+<ul>
+<li>
+<p><a href="https://babel.pocoo.org/en/latest/">Babel</a></p>
+</li>
+<li>
+<p><a href="https://pypi.org/project/phonenumbers/">Phonenumbers</a></p>
+</li>
+</ul>
 
 
 

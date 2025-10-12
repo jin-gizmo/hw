@@ -13,10 +13,10 @@
       
       
       
-        <link rel="prev" href="01-overview.html">
+        <link rel="prev" href="03-document-templates.html">
       
       
-        <link rel="next" href="03-document-templates.html">
+        <link rel="next" href="05-template-rendering.html">
       
       
       <link rel="icon" href="img/docma-logo/png/docma-icon-light.png">
@@ -24,7 +24,7 @@
     
     
       
-        <title>Document Creation - Docma User Guide</title>
+        <title>Template Compilation - Docma User Guide</title>
       
     
     
@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#document-creation" class="md-skip">
+        <a href="#docma-template-compilation" class="md-skip">
           Skip to content
         </a>
       
@@ -115,7 +115,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Document Creation
+              Template Compilation
             
           </span>
         </div>
@@ -265,19 +265,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="02-document-creation.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="02-document-creation.html" class="md-nav__link">
         
   
   
@@ -288,7 +279,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -319,10 +309,19 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="04-template-compilation.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="04-template-compilation.html" class="md-nav__link md-nav__link--active">
         
   
   
@@ -333,6 +332,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -569,30 +569,36 @@
 
 
 
-<h1 id="document-creation">Document Creation<a class="headerlink" href="#document-creation" title="Permanent link">&para;</a></h1>
-<p>The docma document creation process consists of these steps:</p>
+<h1 id="docma-template-compilation">Docma Template Compilation<a class="headerlink" href="#docma-template-compilation" title="Permanent link">&para;</a></h1>
+<p>The compilation process is a build-time activity consisting of the following steps:</p>
 <ol>
 <li>
-<p><a href="03-document-templates.html#document-templates">Document template creation</a>: The template content is
-    contained in a directory dedicated to a single template. It contains the
-    static content (e.g. HTML, PDF, Markdown and image files) as well as YAML
-    formatted metadata files that control the rendering process, database access
-    etc.</p>
+<p>Validate the template <a href="03-document-templates.html#template-configuration-file">configuration file</a>.</p>
 </li>
 <li>
-<p><a href="04-template-compilation.html#docma-template-compilation">Template compilation</a>: The compilation process
-    validates the template content, converts supported non-HTML content (e.g.
-    Markdown files) into HTML and generates a compiled template package
-    in either a directory or ZIP file.</p>
+<p>Copy files from the template source to the template staging area,
+    compiling any compilable files (e.g Markdown) to HTML in the process.</p>
 </li>
 <li>
-<p><a href="05-template-rendering.html#docma-template-rendering">Template rendering</a>: The rendering process
-    uses Jinja to inject run-time parameters into the HTML template content,
-    converts the component documents to PDF, if required, and composes all of
-    the components into a single output PDF or standalone HTML document.</p>
+<p>Import any files specified in the <code>imports</code> key of the
+    <a href="03-document-templates.html#template-configuration-file">configuration file</a>, compile as required and
+    copy them to the template staging area.</p>
+</li>
+<li>
+<p>Zip up the contents of the template staging area to produce the compiled
+    document template.</p>
 </li>
 </ol>
-<p><img alt="" src="img/docma-high-level.svg" /></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The docma CLI also supports the option of saving the compiled template,
+uncompressed, into a local directory. This is primarily for development and
+testing.</p>
+</div>
+<p><img alt="" src="img/compile-phase.svg" /></p>
+<p>There is (approximately) a one-to-one correspondence between files
+in the source directory and the compiled template. Directory structure is
+preserved.</p>
 
 
 

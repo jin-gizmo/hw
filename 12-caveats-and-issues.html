@@ -13,10 +13,10 @@
       
       
       
-        <link rel="prev" href="01-overview.html">
+        <link rel="prev" href="10-installation-and-usage.html">
       
       
-        <link rel="next" href="03-document-templates.html">
+        <link rel="next" href="13-credits.html">
       
       
       <link rel="icon" href="img/docma-logo/png/docma-icon-light.png">
@@ -24,7 +24,7 @@
     
     
       
-        <title>Document Creation - Docma User Guide</title>
+        <title>Caveats and Issues - Docma User Guide</title>
       
     
     
@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#document-creation" class="md-skip">
+        <a href="#caveats-and-known-issues" class="md-skip">
           Skip to content
         </a>
       
@@ -115,7 +115,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Document Creation
+              Caveats and Issues
             
           </span>
         </div>
@@ -265,19 +265,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="02-document-creation.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="02-document-creation.html" class="md-nav__link">
         
   
   
@@ -288,7 +279,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -473,10 +463,19 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="12-caveats-and-issues.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="12-caveats-and-issues.html" class="md-nav__link md-nav__link--active">
         
   
   
@@ -487,6 +486,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -569,30 +569,29 @@
 
 
 
-<h1 id="document-creation">Document Creation<a class="headerlink" href="#document-creation" title="Permanent link">&para;</a></h1>
-<p>The docma document creation process consists of these steps:</p>
-<ol>
+<h1 id="caveats-and-known-issues">Caveats and Known Issues<a class="headerlink" href="#caveats-and-known-issues" title="Permanent link">&para;</a></h1>
+<ul>
 <li>
-<p><a href="03-document-templates.html#document-templates">Document template creation</a>: The template content is
-    contained in a directory dedicated to a single template. It contains the
-    static content (e.g. HTML, PDF, Markdown and image files) as well as YAML
-    formatted metadata files that control the rendering process, database access
-    etc.</p>
+<p>Docma does not try particularly hard to be parsimonious with memory usage.</p>
 </li>
 <li>
-<p><a href="04-template-compilation.html#docma-template-compilation">Template compilation</a>: The compilation process
-    validates the template content, converts supported non-HTML content (e.g.
-    Markdown files) into HTML and generates a compiled template package
-    in either a directory or ZIP file.</p>
+<p>Docma does pool database connections, but the approach to doing this is
+    fairly naive and may need to be revisited for higher volumes.</p>
 </li>
 <li>
-<p><a href="05-template-rendering.html#docma-template-rendering">Template rendering</a>: The rendering process
-    uses Jinja to inject run-time parameters into the HTML template content,
-    converts the component documents to PDF, if required, and composes all of
-    the components into a single output PDF or standalone HTML document.</p>
+<p>Watch out for HTML authoring systems that leave Jinja-like fragments behind.
+    These <em>will</em> clash with docma's use of Jinja and will generally need to be
+    removed.</p>
 </li>
-</ol>
-<p><img alt="" src="img/docma-high-level.svg" /></p>
+<li>
+<p>WeasyPrint suppresses some errors when rendering HTML and tries hard to
+    produce something. This is unfortunate. In docma, it would have been
+    preferable to fail if rendering fails to avoid an incomplete document.</p>
+</li>
+<li>
+<p>Internal document links within the rendered PDF don't work.</p>
+</li>
+</ul>
 
 
 
