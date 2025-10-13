@@ -13,10 +13,8 @@
       
       
       
-        <link rel="prev" href="03-document-templates.html">
+        <link rel="prev" href="14-credits.html">
       
-      
-        <link rel="next" href="05-template-rendering.html">
       
       
       <link rel="icon" href="img/docma-logo/png/docma-icon-light.png">
@@ -24,7 +22,7 @@
     
     
       
-        <title>Template Compilation - Docma User Guide</title>
+        <title>Release Notes - Docma User Guide</title>
       
     
     
@@ -80,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#docma-template-compilation" class="md-skip">
+        <a href="#release-notes" class="md-skip">
           Skip to content
         </a>
       
@@ -115,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Template Compilation
+              Release Notes
             
           </span>
         </div>
@@ -309,19 +307,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="04-template-compilation.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="04-template-compilation.html" class="md-nav__link">
         
   
   
@@ -332,7 +321,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -561,10 +549,32 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="15-release-notes.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Release Notes
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="15-release-notes.html" class="md-nav__link md-nav__link--active">
         
   
   
@@ -575,6 +585,35 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#version-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Version 2
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -599,6 +638,23 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#version-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Version 2
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -613,36 +669,130 @@
 
 
 
-<h1 id="docma-template-compilation">Docma Template Compilation<a class="headerlink" href="#docma-template-compilation" title="Permanent link">&para;</a></h1>
-<p>The compilation process is a build-time activity consisting of the following steps:</p>
-<ol>
+<h1 id="release-notes">Release Notes<a class="headerlink" href="#release-notes" title="Permanent link">&para;</a></h1>
+<h2 id="version-2">Version 2<a class="headerlink" href="#version-2" title="Permanent link">&para;</a></h2>
+<h4 id="version-220">Version 2.2.0<a class="headerlink" href="#version-220" title="Permanent link">&para;</a></h4>
+<ul>
 <li>
-<p>Validate the template <a href="03-document-templates.html#template-configuration-file">configuration file</a>.</p>
+<p>The Jinja subsystem has been refactored substantially (backward compatible).
+    Changes include:</p>
+<ul>
+<li>
+<p>Region specific filters are now named with the 2 character ISO country
+    code as a prefix. e.g. <a href="06-jinja-rendering.html#jinja-filter-auabn">au.ABN</a> replaces <code>abn</code> and
+    <a href="06-jinja-rendering.html#jinja-filter-auacn">au.ACN</a> replaces <code>acn</code>.  Using the old forms will
+    still work but produces a deprecation warning.</p>
 </li>
 <li>
-<p>Copy files from the template source to the template staging area,
-    compiling any compilable files (e.g Markdown) to HTML in the process.</p>
+<p>Adding new generic and region specific filters has been simplified.</p>
 </li>
 <li>
-<p>Import any files specified in the <code>imports</code> key of the
-    <a href="03-document-templates.html#template-configuration-file">configuration file</a>, compile as required and
-    copy them to the template staging area.</p>
+<p>Docma templates now support <a href="03-document-templates.html#locale-in-docma-templates">locales</a>. A
+    locale is a string such as <code>en_AU</code>, <code>fr_CA</code>, etc and can
+    influence the behaviour of things such as
+    <a href="06-jinja-rendering.html#docma-jinja-filters">Jinja filters</a>.</p>
 </li>
 <li>
-<p>Zip up the contents of the template staging area to produce the compiled
-    document template.</p>
+<p>The names of docma custom Jinja filters, Jinja tests and
+    <a href="06-jinja-rendering.html#docma-format-checkers">format checkers</a> are case insensitive.</p>
 </li>
-</ol>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The docma CLI also supports the option of saving the compiled template,
-uncompressed, into a local directory. This is primarily for development and
-testing.</p>
-</div>
-<p><img alt="" src="img/compile-phase.svg" /></p>
-<p>There is (approximately) a one-to-one correspondence between files
-in the source directory and the compiled template. Directory structure is
-preserved.</p>
+</ul>
+</li>
+<li>
+<p>The following Jinja filters have been added for use in document templates.
+    These are all locale / region aware. Credit to the
+    <a href="https://babel.pocoo.org">Babel</a> and
+    <a href="https://pypi.org/project/phonenumbers/">phonenumbers</a> packages for making
+    this possible. All of the filters come with sensible defaults. The Babel based
+    filters in particular provide a high degree of control over formatting using
+    the <a href="https://unicode.org/reports/tr35/tr35-numbers.html#Number_Format_Patterns">Locale Data Markup Language
+    specification</a>
+    (LDML) if the defaults don't suit.</p>
+<ul>
+<li>
+<p><a href="06-jinja-rendering.html#jinja-filter-phone">phone</a>  formats international phone numbers.</p>
+</li>
+<li>
+<p><a href="06-jinja-rendering.html#jinja-filter-currency">currency</a> formats international currencies.
+    This also provides support for currency specific filters such as <code>AUD</code> ,
+    <code>EUR</code>, <code>GBP</code> for a wide range of currencies. The older <code>dollars</code> filter
+    is still supported but discouraged (not deprecated, as such).</p>
+</li>
+<li>
+<p><a href="06-jinja-rendering.html#jinja-filter-decimal">decimal</a> and
+    <a href="06-jinja-rendering.html#jinja-filter-compact_decimal">compact_decimal</a> format numbers using
+    locale specific conventions.</p>
+</li>
+<li>
+<p><a href="06-jinja-rendering.html#jinja-filter-decimal">percent</a> formats percentages using locale
+    specific conventions.</p>
+</li>
+<li>
+<p><a href="06-jinja-rendering.html#jinja-filter-date">date</a>, <a href="06-jinja-rendering.html#jinja-filter-datetime">datetime</a>,
+    <a href="06-jinja-rendering.html#jinja-filter-time">time</a> and <a href="06-jinja-rendering.html#jinja-filter-timedelta">timedelta</a>
+    format datetime elements using locale specific conventions.</p>
+</li>
+<li>
+<p><a href="06-jinja-rendering.html#jinja-filter-parse_date">parse_date</a> and
+    <a href="06-jinja-rendering.html#jinja-filter-parse_time">parse_time</a> parse dates and times into the
+    appropriate Python objects using locale specific conventions.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>A new suite of <a href="06-jinja-rendering.html#docma-format-checkers">format checkers</a> has
+    been introduced. These serve the dual purpose of being available as <code>format</code>
+    entries for string objects in JSON Schema specifications as well as custom
+    Jinja tests.</p>
+</li>
+<li>
+<p>The following changes have been made to the <code>docma new</code> command used to
+    create a new document template:</p>
+<ul>
+<li>
+<p>Some basic validation has been added to user input values.</p>
+</li>
+<li>
+<p>The default <code>locale</code> for the template must now be specified.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>The <a href="06-jinja-rendering.html#rendering-parameters-provided-by-docma">docma.format</a> rendering
+    parameter has been added to indicate the type of output document being
+    produced, <code>HTML</code> or <code>PDF</code>.</p>
+</li>
+<li>
+<p>Some minor improvements in error messages for database related errors have
+    been made. (Credit MN.)</p>
+</li>
+<li>
+<p>Added the <code>make count</code> target to count lines of code, doc, stuff. Why not?</p>
+</li>
+<li>
+<p>Converted user guide to mkdocs material.</p>
+</li>
+</ul>
+<h4 id="version-210">Version 2.1.0<a class="headerlink" href="#version-210" title="Permanent link">&para;</a></h4>
+<p>This is the open source base release.</p>
+<p>Changes from v2.0.0 are:</p>
+<ul>
+<li>
+<p>Updated CLI install approach.</p>
+</li>
+<li>
+<p>Incremental increase in test coverage.</p>
+</li>
+<li>
+<p>Editorial changes in the user guide.</p>
+</li>
+<li>
+<p>Docker build switched to buildkit.</p>
+</li>
+<li>
+<p>The size limit on imported documents has been increased from 5MB to 10MB.</p>
+</li>
+</ul>
 
 
 

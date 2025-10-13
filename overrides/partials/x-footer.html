@@ -1,0 +1,14 @@
+{% block footer %}
+  <footer class="md-footer">
+    <div class="md-footer-meta md-typeset">
+      <div class="md-footer-meta__inner md-grid">
+        <div class="md-footer-copyright">
+          {% include "partials/copyright.html" %}
+        </div>
+        <div class="md-footer-social">
+          {{  config.extra.environment.MK_PLONKER }}
+        </div>
+      </div>
+    </div>
+  </footer>
+{% endblock %}

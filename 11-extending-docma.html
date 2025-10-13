@@ -13,8 +13,10 @@
       
       
       
-        <link rel="prev" href="13-credits.html">
+        <link rel="prev" href="10-installation-and-usage.html">
       
+      
+        <link rel="next" href="13-caveats-and-issues.html">
       
       
       <link rel="icon" href="img/docma-logo/png/docma-icon-light.png">
@@ -22,7 +24,7 @@
     
     
       
-        <title>Release Notes - Docma User Guide</title>
+        <title>Extending Docma - Docma User Guide</title>
       
     
     
@@ -78,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#release-notes" class="md-skip">
+        <a href="#extending-docma" class="md-skip">
           Skip to content
         </a>
       
@@ -113,7 +115,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Release Notes
+              Extending Docma
             
           </span>
         </div>
@@ -461,50 +463,6 @@
       
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="12-caveats-and-issues.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Caveats and Issues
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="13-credits.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Credits
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
     
   
   
@@ -522,7 +480,7 @@
   
   
   <span class="md-ellipsis">
-    Release Notes
+    Extending Docma
     
   </span>
   
@@ -530,12 +488,12 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="14-release-notes.html" class="md-nav__link md-nav__link--active">
+      <a href="11-extending-docma.html" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
-    Release Notes
+    Extending Docma
     
   </span>
   
@@ -558,9 +516,81 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#version-2" class="md-nav__link">
+  <a href="#content-importers" class="md-nav__link">
     <span class="md-ellipsis">
-      Version 2
+      Content Importers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#content-compilers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Content Compilers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#url-fetchers" class="md-nav__link">
+    <span class="md-ellipsis">
+      URL Fetchers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#content-generators" class="md-nav__link">
+    <span class="md-ellipsis">
+      Content Generators
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-providers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Providers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#format-checkers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Format Checkers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#custom-jinja-filters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Custom Jinja Filters
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#custom-jinja-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Custom Jinja Tests
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#custom-jinja-extensions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Custom Jinja Extensions
     </span>
   </a>
   
@@ -570,6 +600,94 @@
   
 </nav>
       
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="12-api.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="13-caveats-and-issues.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Caveats and Issues
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="14-credits.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Credits
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="15-release-notes.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Release Notes
+    
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -601,9 +719,81 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#version-2" class="md-nav__link">
+  <a href="#content-importers" class="md-nav__link">
     <span class="md-ellipsis">
-      Version 2
+      Content Importers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#content-compilers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Content Compilers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#url-fetchers" class="md-nav__link">
+    <span class="md-ellipsis">
+      URL Fetchers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#content-generators" class="md-nav__link">
+    <span class="md-ellipsis">
+      Content Generators
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-providers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Providers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#format-checkers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Format Checkers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#custom-jinja-filters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Custom Jinja Filters
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#custom-jinja-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Custom Jinja Tests
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#custom-jinja-extensions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Custom Jinja Extensions
     </span>
   </a>
   
@@ -625,130 +815,115 @@
 
 
 
-<h1 id="release-notes">Release Notes<a class="headerlink" href="#release-notes" title="Permanent link">&para;</a></h1>
-<h2 id="version-2">Version 2<a class="headerlink" href="#version-2" title="Permanent link">&para;</a></h2>
-<h4 id="version-220">Version 2.2.0<a class="headerlink" href="#version-220" title="Permanent link">&para;</a></h4>
-<ul>
-<li>
-<p>The Jinja subsystem has been refactored substantially (backward compatible).
-    Changes include:</p>
-<ul>
-<li>
-<p>Region specific filters are now named with the 2 character ISO country
-    code as a prefix. e.g. <a href="06-jinja-rendering.html#jinja-filter-auabn">au.ABN</a> replaces <code>abn</code> and
-    <a href="06-jinja-rendering.html#jinja-filter-auacn">au.ACN</a> replaces <code>acn</code>.  Using the old forms will
-    still work but produces a deprecation warning.</p>
-</li>
-<li>
-<p>Adding new generic and region specific filters has been simplified.</p>
-</li>
-<li>
-<p>Docma templates now support <a href="03-document-templates.html#locale-in-docma-templates">locales</a>. A
-    locale is a string such as <code>en_AU</code>, <code>fr_CA</code>, etc and can
-    influence the behaviour of things such as
-    <a href="06-jinja-rendering.html#docma-jinja-filters">Jinja filters</a>.</p>
-</li>
-<li>
-<p>The names of docma custom Jinja filters, Jinja tests and
-    <a href="06-jinja-rendering.html#docma-format-checkers">format checkers</a> are case insensitive.</p>
-</li>
-</ul>
-</li>
-<li>
-<p>The following Jinja filters have been added for use in document templates.
-    These are all locale / region aware. Credit to the
-    <a href="https://babel.pocoo.org">Babel</a> and
-    <a href="https://pypi.org/project/phonenumbers/">phonenumbers</a> packages for making
-    this possible. All of the filters come with sensible defaults. The Babel based
-    filters in particular provide a high degree of control over formatting using
-    the <a href="https://unicode.org/reports/tr35/tr35-numbers.html#Number_Format_Patterns">Locale Data Markup Language
-    specification</a>
-    (LDML) if the defaults don't suit.</p>
-<ul>
-<li>
-<p><a href="06-jinja-rendering.html#jinja-filter-phone">phone</a>  formats international phone numbers.</p>
-</li>
-<li>
-<p><a href="06-jinja-rendering.html#jinja-filter-currency">currency</a> formats international currencies.
-    This also provides support for currency specific filters such as <code>AUD</code> ,
-    <code>EUR</code>, <code>GBP</code> for a wide range of currencies. The older <code>dollars</code> filter
-    is still supported but discouraged (not deprecated, as such).</p>
-</li>
-<li>
-<p><a href="06-jinja-rendering.html#jinja-filter-decimal">decimal</a> and
-    <a href="06-jinja-rendering.html#jinja-filter-compact_decimal">compact_decimal</a> format numbers using
-    locale specific conventions.</p>
-</li>
-<li>
-<p><a href="06-jinja-rendering.html#jinja-filter-decimal">percent</a> formats percentages using locale
-    specific conventions.</p>
-</li>
-<li>
-<p><a href="06-jinja-rendering.html#jinja-filter-date">date</a>, <a href="06-jinja-rendering.html#jinja-filter-datetime">datetime</a>,
-    <a href="06-jinja-rendering.html#jinja-filter-time">time</a> and <a href="06-jinja-rendering.html#jinja-filter-timedelta">timedelta</a>
-    format datetime elements using locale specific conventions.</p>
-</li>
-<li>
-<p><a href="06-jinja-rendering.html#jinja-filter-parse_date">parse_date</a> and
-    <a href="06-jinja-rendering.html#jinja-filter-parse_time">parse_time</a> parse dates and times into the
-    appropriate Python objects using locale specific conventions.</p>
-</li>
-</ul>
-</li>
-<li>
-<p>A new suite of <a href="06-jinja-rendering.html#docma-format-checkers">format checkers</a> has
-    been introduced. These serve the dual purpose of being available as <code>format</code>
-    entries for string objects in JSON Schema specifications as well as custom
-    Jinja tests.</p>
-</li>
-<li>
-<p>The following changes have been made to the <code>docma new</code> command used to
-    create a new document template:</p>
-<ul>
-<li>
-<p>Some basic validation has been added to user input values.</p>
-</li>
-<li>
-<p>The default <code>locale</code> for the template must now be specified.</p>
-</li>
-</ul>
-</li>
-<li>
-<p>The <a href="06-jinja-rendering.html#rendering-parameters-provided-by-docma">docma.format</a> rendering
-    parameter has been added to indicate the type of output document being
-    produced, <code>HTML</code> or <code>PDF</code>.</p>
-</li>
-<li>
-<p>Some minor improvements in error messages for database related errors have
-    been made. (Credit MN.)</p>
-</li>
-<li>
-<p>Added the <code>make count</code> target to count lines of code, doc, stuff. Why not?</p>
-</li>
-<li>
-<p>Converted user guide to mkdocs material.</p>
-</li>
-</ul>
-<h4 id="version-210">Version 2.1.0<a class="headerlink" href="#version-210" title="Permanent link">&para;</a></h4>
-<p>This is the open source base release.</p>
-<p>Changes from v2.0.0 are:</p>
-<ul>
-<li>
-<p>Updated CLI install approach.</p>
-</li>
-<li>
-<p>Incremental increase in test coverage.</p>
-</li>
-<li>
-<p>Editorial changes in the user guide.</p>
-</li>
-<li>
-<p>Docker build switched to buildkit.</p>
-</li>
-<li>
-<p>The size limit on imported documents has been increased from 5MB to 10MB.</p>
-</li>
-</ul>
+<h1 id="extending-docma">Extending Docma<a class="headerlink" href="#extending-docma" title="Permanent link">&para;</a></h1>
+<p><strong>Docma</strong> has a number of plugable interfaces to allow extension. The process
+works by placing a Python file in the appropriate directory in the code base,
+unless otherwise indicated. These are automatically discovered as required.</p>
+<h2 id="content-importers">Content Importers<a class="headerlink" href="#content-importers" title="Permanent link">&para;</a></h2>
+<p>Content importers operate during the docma <a href="04-template-compilation.html#docma-template-compilation">compile</a>
+phase. They collect components from external sources and inject them into the
+compilation process.</p>
+<p>Imported components are referenced via a URL <code>scheme://....</code>. The <code>scheme</code> is
+used to select the importer to be used.</p>
+<p>To create a new importer, add a new Python file into <code>docma/importers</code>. It will
+be auto-discovered.</p>
+<p>See the [API reference][docma.importers] for details.</p>
+<h2 id="content-compilers">Content Compilers<a class="headerlink" href="#content-compilers" title="Permanent link">&para;</a></h2>
+<p>Content compilers operate during the docma <a href="04-template-compilation.html#docma-template-compilation">compile</a>
+phase. They transform a source format into HTML. The source format is determined
+by the filename suffix.</p>
+<p>To create a new compiler, add a new Python file into <code>docma/compilers</code>. It will
+be auto-discovered.</p>
+<p>See the [API reference][docma.compilers] for details.</p>
+<h2 id="url-fetchers">URL Fetchers<a class="headerlink" href="#url-fetchers" title="Permanent link">&para;</a></h2>
+<p><a href="05-template-rendering.html#dynamic-content-generation">URL fetchers</a> operate during the docma
+<a href="05-template-rendering.html#docma-template-rendering">render</a> phase. They provide WeasyPrint with the
+means to resolve URLs within the HTML being converted to PDF. They are also used
+when producing HTML output documents to populate the data for <code>IMG</code> tags.</p>
+<p>URL fetchers are selected based on the scheme of the URL.</p>
+<p>To create a new URL fetcher, add a new Python file into <code>docma/url_fetchers</code>.
+It will be auto-discovered.</p>
+<p>See the [API reference][docma.url_fetchers] for details.</p>
+<h2 id="content-generators">Content Generators<a class="headerlink" href="#content-generators" title="Permanent link">&para;</a></h2>
+<p><a href="05-template-rendering.html#dynamic-content-generation">Content generators</a> operate during the docma
+<a href="05-template-rendering.html#docma-template-rendering">render</a> phase. They dynamically generate content for
+WeasyPrint when a URL in the following form is accessed.</p>
+<div class="language-bare highlight"><pre><span></span><code><span id="__span-0-1"><span class="err">docma:&lt;generator-name&gt;?&lt;generator-params&gt;</span>
+</span></code></pre></div>
+<p>They are typically used for generating image content
+(charts, QR codes etc.) but they can be used wherever URLs return content to
+WeasyPrint.</p>
+<p>To create a new content generator, add a new Python file into
+<code>docma/generators</code>.  It will be auto-discovered. Start by copying the sample
+<code>swatch.py</code> generator and modifying as required.</p>
+<p>See the [API reference][docma.generators] for details.</p>
+<h2 id="data-providers">Data Providers<a class="headerlink" href="#data-providers" title="Permanent link">&para;</a></h2>
+<p><a href="08-data-sources.html#data-sources-in-docma">Data providers</a> operate during the docma
+<a href="05-template-rendering.html#docma-template-rendering">render</a> phase.</p>
+<p>The data provider handler is selected by the <code>type</code> component of a
+<a href="08-data-sources.html#data-source-specifications">data source specification</a>.</p>
+<p>To create a new data provider, add a new Python file into
+<code>docma/data_providers</code>. It will be auto-discovered.  Start by copying one of
+the existing providers and modify as needed.</p>
+<p>See the [API reference][docma.data_providers] for details.</p>
+<h2 id="format-checkers">Format Checkers<a class="headerlink" href="#format-checkers" title="Permanent link">&para;</a></h2>
+<p>Docma has a number of custom <a href="06-jinja-rendering.html#docma-format-checkers">format
+checkers</a> that serve a dual role as JSON
+Schema string formats and custom Jinja tests. These are implemented using a
+simple plugin mechanism. Read the docstring at the top of <code>docma/lib/plugin.py</code>
+before launching into it.</p>
+<p>To create a new format checker, add a new Python file into
+<code>docma/plugins/format_checkers</code>.  Start by copying one of the existing checkers.</p>
+<p>Checkers can be grouped together in families (e.g. the <code>au.*</code> suite) using
+nested Python packages (directories containing <code>__init__.py</code>). The discovery and
+loading process is automatic.</p>
+<p>Each checker is basically a decorated function with a single parameter,
+being the string value to be checked, and must return a boolean indicating
+whether it conforms to the required format, or not.</p>
+<p>It is also possible to have checkers with names generated dynamically at
+run-time. Tricky. Don't start here on day one but check out the
+<code>DateFormatResolver</code> class in <code>docma/jinja/resolvers.py</code> if the fever is upon
+you.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Resolvers are <em>not</em> automatically discovered.</p>
+</div>
+<h2 id="custom-jinja-filters">Custom Jinja Filters<a class="headerlink" href="#custom-jinja-filters" title="Permanent link">&para;</a></h2>
+<p>Docma has a number of custom Jinja
+<a href="06-jinja-rendering.html#docma-jinja-filters">filters</a>. These are implemented using
+a simple plugin mechanism. Read the docstring at the top of
+<code>docma/lib/plugin.py</code>  before launching into it.</p>
+<p>To create a new format checker, add a new Python file into
+<code>docma/plugins/jinja_filters</code>.  Start by copying one of the existing filters.</p>
+<p>Checkers can be grouped together in families (e.g. the <code>au.*</code> suite) using
+nested Python packages (directories containing <code>__init__.py</code>). The discovery and
+loading process is automatic.</p>
+<p>It is also possible to have filters with names generated dynamically at
+run-time. For example, the <a href="06-jinja-rendering.html#jinja-filter-currency">currency filters</a> work this
+way. Tricky. Don't start here on day one but check out the
+<code>CurrencyFilterResolver</code> class in <code>docma/jinja/resolvers.py</code> if inspiration
+strikes.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Resolvers are <em>not</em> automatically discovered.</p>
+</div>
+<h2 id="custom-jinja-tests">Custom Jinja Tests<a class="headerlink" href="#custom-jinja-tests" title="Permanent link">&para;</a></h2>
+<p>Docma does not currently provide any custom Jinja tests, other than custom
+<a href="06-jinja-rendering.html#docma-format-checkers">format checkers</a> which are kept separate
+because they server both Jinja and JSON Schema.</p>
+<p>Unlike custom <a href="06-jinja-rendering.html#docma-format-checkers">format checkers</a>, custom
+tests can be written to accept arguments additional to the value being tested.</p>
+<p>All of the scaffolding required to add custom Jinja tests is present. The
+mechanism is the same as used for adding <a href="#custom-jinja-filters">custom jinja
+filters</a> except that the required decorator is
+<code>@jtest</code> instead of <code>@jfilter</code> and they should be placed in
+<code>docma/plugins/jinja_tests</code> instead of <code>docma/plugins/jinja_filters</code>. The
+discovery and loading process is automatic.</p>
+<h2 id="custom-jinja-extensions">Custom Jinja Extensions<a class="headerlink" href="#custom-jinja-extensions" title="Permanent link">&para;</a></h2>
+<p>Docma has a number of custom Jinja
+<a href="06-jinja-rendering.html#docma-jinja-extensions">extensions</a>. These are all
+contained in the file <code>docma/jinja/extensions.py</code>. New ones can be added to this
+file but if you think you need to, think again.</p>
 
 
 
@@ -772,7 +947,6 @@
       </main>
       
         <footer class="md-footer">
-  
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
       <div class="md-copyright">
@@ -781,14 +955,14 @@
       &copy; Origin Energy
     </div>
   
-  
-    Made with
-    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-      Material for MkDocs
-    </a>
-  
 </div>
-      
+      <div class="md-footer-social">
+        <div class="md-copyright">
+          <div class="md-copyright__highlight">
+            
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </footer>
