@@ -13,21 +13,25 @@
       
       
       
+        <link rel="prev" href="01-about-lava.html">
       
       
-      <link rel="icon" href="/img/lava-icons/png/256/lava-icon-256-transparent.png">
+        <link rel="next" href="03-architecture.html">
+      
+      
+      <link rel="icon" href="img/lava-icons/png/256/lava-icon-256-transparent.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.21">
     
     
       
-        <title>Lava User Guide</title>
+        <title>Concepts - Lava User Guide</title>
       
     
     
-      <link rel="stylesheet" href="/assets/stylesheets/main.2a3383ac.min.css">
+      <link rel="stylesheet" href="assets/stylesheets/main.2a3383ac.min.css">
       
         
-        <link rel="stylesheet" href="/assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -46,11 +50,11 @@
       
     
     
-      <link rel="stylesheet" href="/assets/_mkdocstrings.css">
+      <link rel="stylesheet" href="assets/_mkdocstrings.css">
     
-      <link rel="stylesheet" href="/css/extra.css">
+      <link rel="stylesheet" href="css/extra.css">
     
-    <script>__md_scope=new URL("/",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -75,6 +79,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#concepts" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -87,9 +96,9 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="/." title="Lava User Guide" class="md-header__button md-logo" aria-label="Lava User Guide" data-md-component="logo">
+    <a href="." title="Lava User Guide" class="md-header__button md-logo" aria-label="Lava User Guide" data-md-component="logo">
       
-  <img src="/img/lava-icons/svg/256/lava-icon-256-opaque.svg" alt="logo">
+  <img src="img/lava-icons/svg/256/lava-icon-256-opaque.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -106,7 +115,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              Concepts
             
           </span>
         </div>
@@ -234,9 +243,9 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/." title="Lava User Guide" class="md-nav__button md-logo" aria-label="Lava User Guide" data-md-component="logo">
+    <a href="." title="Lava User Guide" class="md-nav__button md-logo" aria-label="Lava User Guide" data-md-component="logo">
       
-  <img src="/img/lava-icons/svg/256/lava-icon-256-opaque.svg" alt="logo">
+  <img src="img/lava-icons/svg/256/lava-icon-256-opaque.svg" alt="logo">
 
     </a>
     Lava User Guide
@@ -265,7 +274,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/01-about-lava.html" class="md-nav__link">
+      <a href="01-about-lava.html" class="md-nav__link">
         
   
   
@@ -284,10 +293,32 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="/02-concepts.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Concepts
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="02-concepts.html" class="md-nav__link md-nav__link--active">
         
   
   
@@ -298,6 +329,89 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#realms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Realms
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jobs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Jobs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#workers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Workers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#handlers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Handlers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dispatchers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dispatchers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#payloads" class="md-nav__link">
+    <span class="md-ellipsis">
+      Payloads
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#actions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Actions
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -309,7 +423,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/03-architecture.html" class="md-nav__link">
+      <a href="03-architecture.html" class="md-nav__link">
         
   
   
@@ -331,7 +445,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/04-dynamodb-tables.html" class="md-nav__link">
+      <a href="04-dynamodb-tables.html" class="md-nav__link">
         
   
   
@@ -353,7 +467,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/05-job-dispatch.html" class="md-nav__link">
+      <a href="05-job-dispatch.html" class="md-nav__link">
         
   
   
@@ -375,7 +489,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/06-jobs-job-types.html" class="md-nav__link">
+      <a href="06-jobs-job-types.html" class="md-nav__link">
         
   
   
@@ -397,7 +511,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/07-connectors.html" class="md-nav__link">
+      <a href="07-connectors.html" class="md-nav__link">
         
   
   
@@ -419,7 +533,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/08-job-actions.html" class="md-nav__link">
+      <a href="08-job-actions.html" class="md-nav__link">
         
   
   
@@ -441,7 +555,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/09-lava-state-manager.html" class="md-nav__link">
+      <a href="09-lava-state-manager.html" class="md-nav__link">
         
   
   
@@ -463,7 +577,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/10-installation-operation.html" class="md-nav__link">
+      <a href="10-installation-operation.html" class="md-nav__link">
         
   
   
@@ -485,7 +599,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/11-lava-job-framework.html" class="md-nav__link">
+      <a href="11-lava-job-framework.html" class="md-nav__link">
         
   
   
@@ -507,7 +621,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/12-developing-lava-jobs.html" class="md-nav__link">
+      <a href="12-developing-lava-jobs.html" class="md-nav__link">
         
   
   
@@ -529,7 +643,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/13-jinja-rendering-in-lava.html" class="md-nav__link">
+      <a href="13-jinja-rendering-in-lava.html" class="md-nav__link">
         
   
   
@@ -551,7 +665,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/14-enhancing-lava.html" class="md-nav__link">
+      <a href="14-enhancing-lava.html" class="md-nav__link">
         
   
   
@@ -573,7 +687,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/15-lava-and-docker.html" class="md-nav__link">
+      <a href="15-lava-and-docker.html" class="md-nav__link">
         
   
   
@@ -595,7 +709,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/16-commands-utilities.html" class="md-nav__link">
+      <a href="16-commands-utilities.html" class="md-nav__link">
         
   
   
@@ -617,7 +731,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/17-job-framework-samples.html" class="md-nav__link">
+      <a href="17-job-framework-samples.html" class="md-nav__link">
         
   
   
@@ -639,7 +753,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/18-api.html" class="md-nav__link">
+      <a href="18-api.html" class="md-nav__link">
         
   
   
@@ -661,7 +775,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/19-cloudformation-templates.html" class="md-nav__link">
+      <a href="19-cloudformation-templates.html" class="md-nav__link">
         
   
   
@@ -683,7 +797,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/20-faq.html" class="md-nav__link">
+      <a href="20-faq.html" class="md-nav__link">
         
   
   
@@ -705,7 +819,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/21-release-notes.html" class="md-nav__link">
+      <a href="21-release-notes.html" class="md-nav__link">
         
   
   
@@ -727,7 +841,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/22-credits.html" class="md-nav__link">
+      <a href="22-credits.html" class="md-nav__link">
         
   
   
@@ -749,7 +863,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/23-known-issues.html" class="md-nav__link">
+      <a href="23-known-issues.html" class="md-nav__link">
         
   
   
@@ -781,6 +895,79 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#realms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Realms
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jobs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Jobs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#workers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Workers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#handlers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Handlers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dispatchers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dispatchers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#payloads" class="md-nav__link">
+    <span class="md-ellipsis">
+      Payloads
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#actions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Actions
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -792,8 +979,88 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
 
+
+  
+  
+
+
+<h1 id="concepts">Concepts<a class="headerlink" href="#concepts" title="Permanent link">&para;</a></h1>
+<p>Lava is based on the following concepts.</p>
+<h2 id="realms">Realms<a class="headerlink" href="#realms" title="Permanent link">&para;</a></h2>
+<p>A lava realm is a completely self-contained lava deployment. A realm has its own
+dedicated <a href="04-dynamodb-tables.html#dynamodb-tables">configuration tables</a>,
+<a href="#jobs">jobs</a>, <a href="#dispatchers">dispatchers</a>,
+<a href="#workers">workers</a>,
+<a href="#payloads">S3 payload storage</a> and security controls.</p>
+<h2 id="jobs">Jobs<a class="headerlink" href="#jobs" title="Permanent link">&para;</a></h2>
+<p>A job is a lava unit of work. Jobs are sent by a <em>dispatcher</em> to <em>workers</em>,
+either on demand, based on a cron style schedule, in response to an S3 bucket
+notification event or in response to an Amazon EventBridge event. Each
+invocation of a job is a <em>job run</em> and is assigned a UUID. This UUID is used in
+the naming of job outputs in S3 and in event logging.  Various job types are
+supported, depending on the kind of processing required.</p>
+<p>In most cases, a job will run within seconds of being dispatched. When a job is
+run, it inherits the local timezone of the worker. For those job types that
+support environment variable parameters (e.g. the
+<a href="06-jobs-job-types.html#job-type-exe">exe job type</a> and
+<a href="06-jobs-job-types.html#job-type-pkg">pkg job type</a>, this can be modified by setting
+the <code>TZ</code> environment variable. It is important to understand that the dispatcher
+and the worker may operate in different timezones. The dispatcher timezone
+controls <em>when</em> the job runs. The worker timezone controls the timezone in which
+the job runs.</p>
+<h2 id="workers">Workers<a class="headerlink" href="#workers" title="Permanent link">&para;</a></h2>
+<p>Workers are Linux based nodes that receive <em>jobs</em> from <em>dispatchers</em> via AWS SQS.</p>
+<p>A <em>realm</em> can have one or more worker fleets with each fleet having one or more
+worker nodes. All workers in a fleet must have the same capabilities but
+different fleets can have different capabilities.</p>
+<p>For example, it's possible to have one fleet of workers dedicated to short jobs
+that require minimal computational power and a second fleet dedicated to jobs
+requiring significant computation. Jobs are dispatched to whichever fleet is
+specified in the job configuration.</p>
+<p>Workers can be AWS EC2 nodes but do not have to be. Any Linux node with Python
+3.8+ installed can be a worker.</p>
+<p>Worker fleets can be set to auto scale if required.</p>
+<h2 id="handlers">Handlers<a class="headerlink" href="#handlers" title="Permanent link">&para;</a></h2>
+<p>The <em>worker</em> uses a simple plugin mechanism to handle <em>jobs</em> of different types.
+Each such plugin handles a given <em>job</em> type.</p>
+<p>Current handlers support actions such as running SQL, running executables and
+building the lava crontab on a <em>dispatcher</em>. It is relatively straightforward
+to add new handlers.</p>
+<h2 id="dispatchers">Dispatchers<a class="headerlink" href="#dispatchers" title="Permanent link">&para;</a></h2>
+<p>Dispatchers send job run instructions to <em>workers</em> via AWS SQS. If a <em>realm</em>
+is to have scheduled jobs, then it must have at least one dispatcher.</p>
+<p>A <em>realm</em> can have multiple dispatchers. For example, a realm may need to
+schedule jobs in two different timezones (e.g. local and UTC) in which case
+there would be two dispatchers, each operating in its respective timezone.
+However, a given job must specify a single dispatcher.</p>
+<p>A dispatcher is just a special kind of worker that uses the onboard <em>cron</em>
+daemon to send dispatch messages. Like all workers, it is stateless and the
+crontab is built behind the scenes automatically by a special job type.</p>
+<p>Refer to <a href="05-job-dispatch.html#the-lava-dispatch-process">The Lava Dispatch Process</a>
+for more information.</p>
+<h2 id="payloads">Payloads<a class="headerlink" href="#payloads" title="Permanent link">&para;</a></h2>
+<p>Each <em>job</em> has an associated payload. This is typically the code bundle that is
+to be executed for the <em>job</em>. Payloads are stored in an area of S3 dedicated to
+the <em>realm</em>.</p>
+<h2 id="actions">Actions<a class="headerlink" href="#actions" title="Permanent link">&para;</a></h2>
+<p>For each <em>job</em>, it is possible to specify actions that are to be performed when
+the <em>job</em> completes, fails or retries. Actions include things such as
+dispatching other jobs or sending messages via SQS, SNS, SES etc.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
               </article>
             </div>
           
@@ -832,10 +1099,10 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "/", "features": ["navigation.instant", "content.code.copy", {"icon": {"repo": "material/github"}}], "search": "/assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": ".", "features": ["navigation.instant", "content.code.copy", {"icon": {"repo": "material/github"}}], "search": "assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="/assets/javascripts/bundle.f55a23d4.min.js"></script>
+      <script src="assets/javascripts/bundle.f55a23d4.min.js"></script>
       
     
   </body>

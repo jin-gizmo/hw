@@ -13,6 +13,10 @@
       
       
       
+        <link rel="prev" href="14-enhancing-lava.html">
+      
+      
+        <link rel="next" href="16-commands-utilities.html">
       
       
       <link rel="icon" href="img/lava-icons/png/256/lava-icon-256-transparent.png">
@@ -20,7 +24,7 @@
     
     
       
-        <title>Lava User Guide</title>
+        <title>Lava and Docker - Lava User Guide</title>
       
     
     
@@ -76,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#lava-user-guide" class="md-skip">
+        <a href="#lava-and-docker" class="md-skip">
           Skip to content
         </a>
       
@@ -111,7 +115,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Lava User Guide
+              Lava and Docker
             
           </span>
         </div>
@@ -575,10 +579,32 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="15-lava-and-docker.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Lava and Docker
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="15-lava-and-docker.html" class="md-nav__link md-nav__link--active">
         
   
   
@@ -589,6 +615,104 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#running-docker-containers-under-lava" class="md-nav__link">
+    <span class="md-ellipsis">
+      Running Docker Containers Under Lava
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Running Docker Containers Under Lava">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#handling-of-temporary-files-in-docker-jobs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Handling of Temporary Files in Docker Jobs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#handling-of-container-logs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Handling of Container Logs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exit-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exit Status
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connection-handling-for-container-based-jobs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Connection Handling for Container Based Jobs
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#running-lava-in-a-docker-container" class="md-nav__link">
+    <span class="md-ellipsis">
+      Running Lava in a Docker Container
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-docker-registry" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Docker Registry
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#docker-images-for-lava" class="md-nav__link">
+    <span class="md-ellipsis">
+      Docker Images for Lava
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -789,6 +913,92 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#running-docker-containers-under-lava" class="md-nav__link">
+    <span class="md-ellipsis">
+      Running Docker Containers Under Lava
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Running Docker Containers Under Lava">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#handling-of-temporary-files-in-docker-jobs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Handling of Temporary Files in Docker Jobs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#handling-of-container-logs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Handling of Container Logs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exit-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exit Status
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connection-handling-for-container-based-jobs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Connection Handling for Container Based Jobs
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#running-lava-in-a-docker-container" class="md-nav__link">
+    <span class="md-ellipsis">
+      Running Lava in a Docker Container
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-docker-registry" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Docker Registry
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#docker-images-for-lava" class="md-nav__link">
+    <span class="md-ellipsis">
+      Docker Images for Lava
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -806,24 +1016,153 @@
   
 
 
-<h1 id="lava-user-guide">Lava User Guide<a class="headerlink" href="#lava-user-guide" title="Permanent link">&para;</a></h1>
-<p>Lava is an AWS based distributed scheduler and job runner.</p>
-<div style="text-align: center;">
-  <img src="img/lava-icons/svg/256/lava-icon-256-transparent.svg" 
-       alt="Docma Logo" 
-       width="150" 
-       height="auto"
-       class="lava-logo">
+<h1 id="lava-and-docker">Lava and Docker<a class="headerlink" href="#lava-and-docker" title="Permanent link">&para;</a></h1>
+<p>Lava can use docker in distinct, but related ways:</p>
+<ol>
+<li>
+<p>Lava can run docker container based jobs using the
+    <a href="06-jobs-job-types.html#job-type-docker">docker job type</a>.</p>
+</li>
+<li>
+<p>The lava programs (worker, dispatcher and other tools) can run in a docker
+    container.</p>
+</li>
+<li>
+<p>The lava code bundle can be built for various target Linux versions inside
+    docker containers.</p>
+</li>
+</ol>
+<h2 id="running-docker-containers-under-lava">Running Docker Containers Under Lava<a class="headerlink" href="#running-docker-containers-under-lava" title="Permanent link">&para;</a></h2>
+<p>The <a href="06-jobs-job-types.html#job-type-docker">docker job type</a> runs a docker container
+in more or less the same way that it runs <a href="06-jobs-job-types.html#job-type-exe">exe</a>
+and <a href="06-jobs-job-types.html#job-type-pkg">pkg</a> jobs. In the former case, the payload
+is obtained as a docker image and in the latter cases as an executable or code
+bundle loaded from S3.</p>
+<h3 id="handling-of-temporary-files-in-docker-jobs">Handling of Temporary Files in Docker Jobs<a class="headerlink" href="#handling-of-temporary-files-in-docker-jobs" title="Permanent link">&para;</a></h3>
+<p>The lava worker maps the temporary area for the job into the container and makes
+an additional environment variable, <code>LAVA_TMP</code>, available to point to it.
+Anything written to this area in the container will appear on the host. This can
+be useful with <a href="06-jobs-job-types.html#job-type-chain">chain</a> jobs as all jobs in the
+chain share the same temporary area on the lava worker.</p>
+<h3 id="handling-of-container-logs">Handling of Container Logs<a class="headerlink" href="#handling-of-container-logs" title="Permanent link">&para;</a></h3>
+<p>The container uses the default container logging configuration. Logs are
+collected by the lava worker and uploaded to the realm temporary area in S3
+unless the worker is running with the <code>--dev</code> option. In that case the logs are
+emitted locally on the worker.</p>
+<h3 id="exit-status">Exit Status<a class="headerlink" href="#exit-status" title="Permanent link">&para;</a></h3>
+<p>Lava assumes that a zero exit status from the container indicates that the job
+has succeeded. This will trigger any <code>on_success</code> job actions.</p>
+<p>A non-zero exit status indicates to lava that the job has failed. This will
+trigger any <code>on_fail</code> actions.</p>
+<h3 id="connection-handling-for-container-based-jobs">Connection Handling for Container Based Jobs<a class="headerlink" href="#connection-handling-for-container-based-jobs" title="Permanent link">&para;</a></h3>
+<p>Connections to external resources are implemented as small executables created
+by lava which are mapped into the container and invoked within the container
+in the same way that they would be for an <a href="06-jobs-job-types.html#job-type-exe">exe</a>
+or <a href="06-jobs-job-types.html#job-type-pkg">pkg</a> job.</p>
+<p>Refer to <a href="12-developing-lava-jobs.html#connection-handling-for-executable-jobs">the relevant
+section</a> in
+the chapter on <a href="12-developing-lava-jobs.html#developing-lava-jobs">developing lava jobs</a> for
+more information.</p>
+<p>This mechanism should work with any Linux based container provided that the
+required CLI components are installed in the container. So for example, if a
+Postgres connector is required, the container must have the <strong>psql</strong> CLI
+installed.</p>
+<p>An easy way to ensure the required components are installed is to use one of
+the <em>full</em> <a href="#docker-images-for-lava">docker images for lava</a>.
+These images contain most, if not all, of the CLI components required for lava
+supported connection types.</p>
+<p>Python executables running in a docker container based on one of the <a href="#docker-images-for-lava">docker
+images for lava</a> can use the connection
+manager directly as described in <a href="12-developing-lava-jobs.html#connection-handling-for-python-based-jobs">the relevant
+section</a> in the
+chapter on <a href="12-developing-lava-jobs.html#developing-lava-jobs">developing lava jobs</a>. It is
+important to ensure that <code>/usr/local/lib/lava</code> is on the <code>PYTHONPATH</code> for the
+executable in the container.</p>
+<h2 id="running-lava-in-a-docker-container">Running Lava in a Docker Container<a class="headerlink" href="#running-lava-in-a-docker-container" title="Permanent link">&para;</a></h2>
+<p>The lava worker, dispatch and events viewer executables can themselves run in a
+docker container. The <a href="#docker-images-for-lava">docker images for
+lava</a> have lava pre-installed.</p>
+<h2 id="the-docker-registry">The Docker Registry<a class="headerlink" href="#the-docker-registry" title="Permanent link">&para;</a></h2>
+<p>Lava obtains container images from a docker registry. The following registry
+options are supported:</p>
+<ul>
+<li>AWS ECR (recommended)</li>
+<li>Private docker registries</li>
+<li>The standard docker public registry (not recommended).</li>
+</ul>
+<p>The lava connection manager handles the process of connecting to docker servers
+and docker registries. The <a href="07-connectors.html#connector-type-docker">docker connection
+ID</a> can be specified at the job level
+or the realm level. A value specified at the job level will take precedence.</p>
+<p>By default, an AWS EC2 based lava worker has permissions to pull images from the
+following ECR repositories:</p>
+<ul>
+<li><code>dist/lava/*</code></li>
+<li><code>lava/&lt;REALM&gt;/*</code></li>
+</ul>
+<h2 id="docker-images-for-lava">Docker Images for Lava<a class="headerlink" href="#docker-images-for-lava" title="Permanent link">&para;</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>As of version 8.1.0 (Kīlauea), lava supports multi-platform images suitable
+for use on both ARM (<code>linux/arm64</code>) and x86 (<code>linux/amd64</code>).</p>
 </div>
-
-<div class="admonition warning">
-<p><strong>Lava</strong> was developed at <a href="https://www.originenergy.com.au">Origin Energy</a> as part of the
-<em>Jindabyne</em> initiative. While not part of our core IP, it proved valuable
-internally, and we're sharing it in the hope it's useful to others.</p>
-<p><a href="https://jin-gizmo.github.io"><img alt="Jin Gizmo Home" src="https://img.shields.io/badge/Jin_Gizmo_Home-d30000?logo=GitHub&amp;color=d30000" /></a></p>
-<p>Kudos to Origin for fostering a culture that empowers its people
-to build complex technology solutions in-house.</p>
+<p>Lava comes with tools to build some standard docker images that have the lava
+code and other essential components pre-installed. Currently available image
+types are:</p>
+<table>
+<thead>
+<tr>
+<th>Image name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>dist/lava/&lt;OS&gt;/base</code></td>
+<td>A base installation of lava but without the external components required to use CLI based connectors.</td>
+</tr>
+<tr>
+<td><code>dist/lava/&lt;OS&gt;/full</code></td>
+<td>A full installation of lava that includes the external components required to use CLI based connectors.</td>
+</tr>
+</tbody>
+</table>
+<p>Images are tagged <code>latest</code>. A tag matching the version of the lava code is also
+applied.</p>
+<p>Currently available O/S types for the lava images are:</p>
+<table>
+<thead>
+<tr>
+<th>O/S</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>amzn2023</td>
+<td>An <a href="https://docs.aws.amazon.com/linux/al2023/ug/container.html">Amazon Linux 2023</a> based image. The <em>full</em> version of the image includes all CLI based connectors, including Oracle sql*plus.</td>
+</tr>
+<tr>
+<td>rocky9</td>
+<td>A standard <a href="https://rockylinux.org">Rocky 9 Linux</a> based image. The <em>full</em> version of the image includes all CLI based connectors, including Oracle sql*plus.</td>
+</tr>
+<tr>
+<td>ubuntu24</td>
+<td>A standard <a href="https://www.ubuntu.com">Ubuntu Linux 24.04</a> (LTS) based image. The <em>full</em> version of the image includes all CLI based connectors, including Oracle sql*plus.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>They all have the following as of v8.1 (Kīlauea)</p>
+<ul>
+<li>Python 3.12</li>
+<li>OpenSSL 3 or later</li>
+<li>AWS CLI version 2</li>
+</ul>
 </div>
+<p>Instructions on building the images can be found in the section on
+<a href="10-installation-operation.html#building-the-lava-docker-images">lava installation</a>.</p>
 
 
 

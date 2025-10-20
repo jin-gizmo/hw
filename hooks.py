@@ -9,7 +9,7 @@ import os
 def on_config(config, **kwargs):
     """Add dynamic values to config.extra."""
 
-    config.extra['build_time'] = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    config.extra['build_time'] = datetime.datetime.now().astimezone()
     config.extra['git_commit'] = os.popen('git rev-parse --short HEAD').read().strip()
     # Allows us to reference environment vars as {{ config.extra.environment.name }}
     config.extra['environment'] = os.environ
