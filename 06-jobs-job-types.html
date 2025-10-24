@@ -488,7 +488,7 @@
           <li class="md-nav__item">
   <a href="#lava-job-retries-iterations-vs-sqs-resubmissions" class="md-nav__link">
     <span class="md-ellipsis">
-      Lava Job Retries (Iterations) vs SQS Resubmissions
+      Retries vs Resubmissions
     </span>
   </a>
   
@@ -753,9 +753,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#deriving-the-target-schema-and-table-name-from-the-s3-key" class="md-nav__link">
+  <a href="#deriving-target-schema-and-table-name-from-the-s3-key" class="md-nav__link">
     <span class="md-ellipsis">
-      Deriving the Target Schema and Table Name from the S3 Key
+      Deriving Target Schema and Table Name from the S3 Key
     </span>
   </a>
   
@@ -2594,7 +2594,7 @@
           <li class="md-nav__item">
   <a href="#lava-job-retries-iterations-vs-sqs-resubmissions" class="md-nav__link">
     <span class="md-ellipsis">
-      Lava Job Retries (Iterations) vs SQS Resubmissions
+      Retries vs Resubmissions
     </span>
   </a>
   
@@ -2859,9 +2859,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#deriving-the-target-schema-and-table-name-from-the-s3-key" class="md-nav__link">
+  <a href="#deriving-target-schema-and-table-name-from-the-s3-key" class="md-nav__link">
     <span class="md-ellipsis">
-      Deriving the Target Schema and Table Name from the S3 Key
+      Deriving Target Schema and Table Name from the S3 Key
     </span>
   </a>
   
@@ -4256,7 +4256,7 @@
   
 
 
-<h1 id="jobs-and-job-types">Jobs and Job Types<a class="headerlink" href="#jobs-and-job-types" title="Permanent link">&para;</a></h1>
+<h1 id="jobs-and-job-types" x-nav="Jobs &amp; Job Types">Jobs and Job Types<a class="headerlink" href="#jobs-and-job-types" title="Permanent link">&para;</a></h1>
 <p>A lava job is a static definition represented as an entry in the
 <a href="04-dynamodb-tables.html#the-jobs-table">jobs</a> table. Each invocation of a job is
 referred to as a <em>run</em> which has a unique <code>run_id</code>.</p>
@@ -5304,7 +5304,7 @@ placed in S3.</p>
 <td>schema</td>
 <td>String</td>
 <td>Yes</td>
-<td>Target schema name. If the Jinja rendered value starts with <code>/</code>, the rest of the value is used as a <a href="#deriving-the-target-schema-and-table-name-from-the-s3-key">regular expression</a> (regex) to derive the schema name from the Jinja rendered <code>key</code> value. In this case, the <code>columns</code> argument is not permitted and the target table must already exist.</td>
+<td>Target schema name. If the Jinja rendered value starts with <code>/</code>, the rest of the value is used as a <a href="#deriving-target-schema-and-table-name-from-the-s3-key">regular expression</a> (regex) to derive the schema name from the Jinja rendered <code>key</code> value. In this case, the <code>columns</code> argument is not permitted and the target table must already exist.</td>
 </tr>
 <tr>
 <td>skip_missing</td>
@@ -5316,7 +5316,7 @@ placed in S3.</p>
 <td>table</td>
 <td>String</td>
 <td>Yes</td>
-<td>Target table name. If the Jinja rendered value starts with <code>/</code>, the rest of the value is used as a <a href="#deriving-the-target-schema-and-table-name-from-the-s3-key">regular expression</a> (regex) to derive the table name from the <code>key</code> argument. In this case, the <code>columns</code> argument is not permitted and the target table must already exist.</td>
+<td>Target table name. If the Jinja rendered value starts with <code>/</code>, the rest of the value is used as a <a href="#deriving-target-schema-and-table-name-from-the-s3-key">regular expression</a> (regex) to derive the table name from the <code>key</code> argument. In this case, the <code>columns</code> argument is not permitted and the target table must already exist.</td>
 </tr>
 <tr>
 <td>vars</td>
@@ -5443,7 +5443,7 @@ still supported for historical reasons. The newer Jinja based method is more
 flexible and consistent with lava generally. Try not to use them both at
 once. It probably won't end well.</p>
 </div>
-<h3 id="deriving-the-target-schema-and-table-name-from-the-s3-key">Deriving the Target Schema and Table Name from the S3 Key<a class="headerlink" href="#deriving-the-target-schema-and-table-name-from-the-s3-key" title="Permanent link">&para;</a></h3>
+<h3 id="deriving-target-schema-and-table-name-from-the-s3-key">Deriving Target Schema and Table Name from the S3 Key<a class="headerlink" href="#deriving-target-schema-and-table-name-from-the-s3-key" title="Permanent link">&para;</a></h3>
 <p>The regex options for <code>schema</code> and <code>table</code> provide an alternate mechanism to
 allow the target table to be derived at run time from the S3 object name. This
 allows a single job specification to be used for multiple tables provided an

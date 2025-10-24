@@ -468,7 +468,7 @@
           <li class="md-nav__item">
   <a href="#database-authentication-using-aws-ssm-parameter-store" class="md-nav__link">
     <span class="md-ellipsis">
-      Database Authentication Using AWS SSM Parameter Store
+      Authentication Using SSM Parameters
     </span>
   </a>
   
@@ -477,7 +477,7 @@
           <li class="md-nav__item">
   <a href="#database-authentication-using-aws-secrets-manager" class="md-nav__link">
     <span class="md-ellipsis">
-      Database Authentication Using AWS Secrets Manager
+      Authentication Using Secrets Manager
     </span>
   </a>
   
@@ -486,7 +486,7 @@
           <li class="md-nav__item">
   <a href="#database-authentication-using-iam-credential-generation" class="md-nav__link">
     <span class="md-ellipsis">
-      Database Authentication Using IAM Credential Generation
+      Authentication Using IAM
     </span>
   </a>
   
@@ -495,7 +495,7 @@
           <li class="md-nav__item">
   <a href="#database-client-application-identification" class="md-nav__link">
     <span class="md-ellipsis">
-      Database Client Application Identification
+      Client Application Identification
     </span>
   </a>
   
@@ -528,7 +528,7 @@
           <li class="md-nav__item">
   <a href="#using-the-aws-connector-in-shell-scripts" class="md-nav__link">
     <span class="md-ellipsis">
-      Using the AWS Connector in Shell Scripts
+      Use in Shell Scripts
     </span>
   </a>
   
@@ -537,7 +537,7 @@
           <li class="md-nav__item">
   <a href="#using-the-aws-connector-in-python" class="md-nav__link">
     <span class="md-ellipsis">
-      Using the AWS Connector in Python
+      Use in Python
     </span>
   </a>
   
@@ -696,7 +696,7 @@
           <li class="md-nav__item">
   <a href="#creating-temporary-iam-user-credentials-for-aws-rds-aurora-mysql" class="md-nav__link">
     <span class="md-ellipsis">
-      Creating Temporary IAM User Credentials for AWS RDS Aurora MySQL
+      IAM Auth for Aurora MySQL
     </span>
   </a>
   
@@ -771,7 +771,7 @@
           <li class="md-nav__item">
   <a href="#creating-temporary-iam-user-credentials-for-aws-rds-aurora-postgresql" class="md-nav__link">
     <span class="md-ellipsis">
-      Creating Temporary IAM User Credentials for AWS RDS Aurora PostgreSQL
+      IAM Auth for Aurora PostgreSQL
     </span>
   </a>
   
@@ -906,7 +906,7 @@
           <li class="md-nav__item">
   <a href="#use-with-python-based-executable-jobs" class="md-nav__link">
     <span class="md-ellipsis">
-      Use with Python-based Executable Jobs
+      Use with Python-based Jobs
     </span>
   </a>
   
@@ -1343,7 +1343,7 @@
           <li class="md-nav__item">
   <a href="#database-authentication-using-aws-ssm-parameter-store" class="md-nav__link">
     <span class="md-ellipsis">
-      Database Authentication Using AWS SSM Parameter Store
+      Authentication Using SSM Parameters
     </span>
   </a>
   
@@ -1352,7 +1352,7 @@
           <li class="md-nav__item">
   <a href="#database-authentication-using-aws-secrets-manager" class="md-nav__link">
     <span class="md-ellipsis">
-      Database Authentication Using AWS Secrets Manager
+      Authentication Using Secrets Manager
     </span>
   </a>
   
@@ -1361,7 +1361,7 @@
           <li class="md-nav__item">
   <a href="#database-authentication-using-iam-credential-generation" class="md-nav__link">
     <span class="md-ellipsis">
-      Database Authentication Using IAM Credential Generation
+      Authentication Using IAM
     </span>
   </a>
   
@@ -1370,7 +1370,7 @@
           <li class="md-nav__item">
   <a href="#database-client-application-identification" class="md-nav__link">
     <span class="md-ellipsis">
-      Database Client Application Identification
+      Client Application Identification
     </span>
   </a>
   
@@ -1403,7 +1403,7 @@
           <li class="md-nav__item">
   <a href="#using-the-aws-connector-in-shell-scripts" class="md-nav__link">
     <span class="md-ellipsis">
-      Using the AWS Connector in Shell Scripts
+      Use in Shell Scripts
     </span>
   </a>
   
@@ -1412,7 +1412,7 @@
           <li class="md-nav__item">
   <a href="#using-the-aws-connector-in-python" class="md-nav__link">
     <span class="md-ellipsis">
-      Using the AWS Connector in Python
+      Use in Python
     </span>
   </a>
   
@@ -1571,7 +1571,7 @@
           <li class="md-nav__item">
   <a href="#creating-temporary-iam-user-credentials-for-aws-rds-aurora-mysql" class="md-nav__link">
     <span class="md-ellipsis">
-      Creating Temporary IAM User Credentials for AWS RDS Aurora MySQL
+      IAM Auth for Aurora MySQL
     </span>
   </a>
   
@@ -1646,7 +1646,7 @@
           <li class="md-nav__item">
   <a href="#creating-temporary-iam-user-credentials-for-aws-rds-aurora-postgresql" class="md-nav__link">
     <span class="md-ellipsis">
-      Creating Temporary IAM User Credentials for AWS RDS Aurora PostgreSQL
+      IAM Auth for Aurora PostgreSQL
     </span>
   </a>
   
@@ -1781,7 +1781,7 @@
           <li class="md-nav__item">
   <a href="#use-with-python-based-executable-jobs" class="md-nav__link">
     <span class="md-ellipsis">
-      Use with Python-based Executable Jobs
+      Use with Python-based Jobs
     </span>
   </a>
   
@@ -2665,6 +2665,8 @@ provided by lava in the connection script.</p>
 if it has values available from the connection specification or other
 configuration data. These values can be overridden by providing the appropriate
 options to then connection script.</p>
+<details>
+<summary>lava-email Usage</summary>
 <div class="language-bare highlight"><pre><span></span><code><span id="__span-11-1"><span class="err">usage:</span><span class="w"> </span><span class="err">lava-email</span><span class="w"> </span><span class="err">[-h]</span><span class="w"> </span><span class="err">[--profile</span><span class="w"> </span><span class="err">PROFILE]</span><span class="w"> </span><span class="err">[-v]</span><span class="w"> </span><span class="err">-c</span><span class="w"> </span><span class="err">CONN_ID</span><span class="w"> </span><span class="err">[-r</span><span class="w"> </span><span class="err">REALM]</span>
 </span><span id="__span-11-2"><span class="w">                  </span><span class="err">[--bcc</span><span class="w"> </span><span class="err">EMAIL]</span><span class="w"> </span><span class="err">[--cc</span><span class="w"> </span><span class="err">EMAIL]</span><span class="w"> </span><span class="err">[--from</span><span class="w"> </span><span class="err">EMAIL]</span><span class="w"> </span><span class="err">[--reply-to</span><span class="w"> </span><span class="err">EMAIL]</span>
 </span><span id="__span-11-3"><span class="w">                  </span><span class="err">[--to</span><span class="w"> </span><span class="err">EMAIL]</span><span class="w"> </span><span class="err">-s</span><span class="w"> </span><span class="err">SUBJECT</span><span class="w"> </span><span class="err">[--html</span><span class="w"> </span><span class="err">FILENAME]</span><span class="w"> </span><span class="err">[--text</span><span class="w"> </span><span class="err">FILENAME]</span>
@@ -2724,6 +2726,7 @@ options to then connection script.</p>
 </span><span id="__span-11-57"><span class="w">  </span><span class="err">--tag</span><span class="w"> </span><span class="err">TAG</span><span class="w">             </span><span class="err">Tag</span><span class="w"> </span><span class="err">log</span><span class="w"> </span><span class="err">entries</span><span class="w"> </span><span class="err">with</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">specified</span><span class="w"> </span><span class="err">value.</span><span class="w"> </span><span class="err">The</span><span class="w"> </span><span class="err">default</span>
 </span><span id="__span-11-58"><span class="w">                        </span><span class="err">is</span><span class="w"> </span><span class="err">lava-email.</span>
 </span></code></pre></div>
+</details>
 <p>As an example, consider an <a href="06-jobs-job-types.html#job-type-exe">exe</a> job specification
 that looks something like this:</p>
 <div class="language-json highlight"><pre><span></span><code><span id="__span-12-1"><span class="p">{</span>

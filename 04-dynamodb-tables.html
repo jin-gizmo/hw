@@ -392,7 +392,7 @@
         <li class="md-nav__item">
   <a href="#the-realms-table" class="md-nav__link">
     <span class="md-ellipsis">
-      The Realms Table
+      Realms
     </span>
   </a>
   
@@ -401,11 +401,11 @@
         <li class="md-nav__item">
   <a href="#the-jobs-table" class="md-nav__link">
     <span class="md-ellipsis">
-      The Jobs Table
+      Jobs
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="The Jobs Table">
+    <nav class="md-nav" aria-label="Jobs">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -434,7 +434,7 @@
         <li class="md-nav__item">
   <a href="#the-connections-table" class="md-nav__link">
     <span class="md-ellipsis">
-      The Connections Table
+      Connections
     </span>
   </a>
   
@@ -443,7 +443,7 @@
         <li class="md-nav__item">
   <a href="#the-events-table" class="md-nav__link">
     <span class="md-ellipsis">
-      The Events Table
+      Events
     </span>
   </a>
   
@@ -452,7 +452,7 @@
         <li class="md-nav__item">
   <a href="#the-s3triggers-table" class="md-nav__link">
     <span class="md-ellipsis">
-      The s3triggers Table
+      S3triggers
     </span>
   </a>
   
@@ -461,11 +461,11 @@
         <li class="md-nav__item">
   <a href="#the-state-table" class="md-nav__link">
     <span class="md-ellipsis">
-      The State Table
+      State
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="The State Table">
+    <nav class="md-nav" aria-label="State">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -937,7 +937,7 @@
         <li class="md-nav__item">
   <a href="#the-realms-table" class="md-nav__link">
     <span class="md-ellipsis">
-      The Realms Table
+      Realms
     </span>
   </a>
   
@@ -946,11 +946,11 @@
         <li class="md-nav__item">
   <a href="#the-jobs-table" class="md-nav__link">
     <span class="md-ellipsis">
-      The Jobs Table
+      Jobs
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="The Jobs Table">
+    <nav class="md-nav" aria-label="Jobs">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -979,7 +979,7 @@
         <li class="md-nav__item">
   <a href="#the-connections-table" class="md-nav__link">
     <span class="md-ellipsis">
-      The Connections Table
+      Connections
     </span>
   </a>
   
@@ -988,7 +988,7 @@
         <li class="md-nav__item">
   <a href="#the-events-table" class="md-nav__link">
     <span class="md-ellipsis">
-      The Events Table
+      Events
     </span>
   </a>
   
@@ -997,7 +997,7 @@
         <li class="md-nav__item">
   <a href="#the-s3triggers-table" class="md-nav__link">
     <span class="md-ellipsis">
-      The s3triggers Table
+      S3triggers
     </span>
   </a>
   
@@ -1006,11 +1006,11 @@
         <li class="md-nav__item">
   <a href="#the-state-table" class="md-nav__link">
     <span class="md-ellipsis">
-      The State Table
+      State
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="The State Table">
+    <nav class="md-nav" aria-label="State">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1047,14 +1047,14 @@
 
 
 <h1 id="dynamodb-tables">DynamoDB Tables<a class="headerlink" href="#dynamodb-tables" title="Permanent link">&para;</a></h1>
-<p>Each lava realm uses the following DynamoDB tables.</p>
+<p>Each lava realm uses a number DynamoDB tables to hold configuration and status
+information.</p>
 <p>The tables are created by the <a href="10-installation-operation.html#lava-installation-and-operation">CloudFormation
 templates</a>.</p>
 <p>See also <a href="10-installation-operation.html#maintaining-dynamodb-table-entries">Maintaining DynamoDB Table Entries</a>.</p>
 <h2 id="the-realms-table">The Realms Table<a class="headerlink" href="#the-realms-table" title="Permanent link">&para;</a></h2>
 <p>The realms table is named <code>lava.realms</code>. This is a global lava table and is the
-only object shared across realms. Realm specifications contain the following
-fields.</p>
+only object shared across realms.</p>
 <table>
 <thead>
 <tr>
@@ -1111,7 +1111,7 @@ fields.</p>
 <td>X-*</td>
 <td>String</td>
 <td>No</td>
-<td>Any fields beginning with <code>x-</code> or <code>X-</code> are ignored by lava. These can be used as required for other purposes (e.g. CI/CD, versioning or other related purposes).</td>
+<td>Any fields beginning with <code>x-</code> or <code>X-</code> are ignored by lava. These can be used as required for other purposes (e.g. CI/CD, versioning or other related purposes). A number of these fields are used as part of the boot process for EC2 based lava workers for configuration control.</td>
 </tr>
 <tr>
 <td>*</td>
@@ -1123,8 +1123,7 @@ fields.</p>
 </table>
 <h2 id="the-jobs-table">The Jobs Table<a class="headerlink" href="#the-jobs-table" title="Permanent link">&para;</a></h2>
 <p>The jobs table for a given <code>&lt;REALM&gt;</code> is named <code>lava.&lt;REALM&gt;.jobs</code>. It contains
-information about jobs and their associated run information. Job specifications
-contain the following fields.</p>
+information about jobs and their associated run information.</p>
 <table>
 <thead>
 <tr>
@@ -1265,7 +1264,7 @@ contain the following fields.</p>
 <td>X-*</td>
 <td>String</td>
 <td>No</td>
-<td>Any fields beginning with <code>x-</code> or <code>X-</code> are ignored by lava. These can be used as required for other purposes (e.g. CI/CD, versioning or other related purposes).</td>
+<td>Any fields beginning with <code>x-</code> or <code>X-</code> are ignored by lava. These can be used as required for other purposes (e.g. CI/CD, versioning or other related purposes). The <a href="11-lava-job-framework.html#the-lava-job-framework">lava job framework</a> uses a number of these fields for various purposes.</td>
 </tr>
 </tbody>
 </table>
@@ -1330,7 +1329,7 @@ execution to be conditional on run-time values. </p>
 </tr>
 </tbody>
 </table>
-<p>As an example, the following job specification component will only enable the
+<p>As an example, the following job specification fragment will only enable the
 job if the value of the global <code>a</code> is palindromic (which it is, in the example):</p>
 <div class="language-json highlight"><pre><span></span><code><span id="__span-0-1"><span class="p">{</span>
 </span><span id="__span-0-2"><span class="w">  </span><span class="nt">&quot;enabled&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;{% set word = globals.a | lower %}{{ word == word | reverse }}&quot;</span><span class="p">,</span>
@@ -1349,7 +1348,7 @@ job if the value of the global <code>a</code> is palindromic (which it is, in th
 </span><span id="__span-1-5"><span class="w">  </span><span class="p">}</span>
 </span><span id="__span-1-6"><span class="p">}</span>
 </span></code></pre></div>
-<p>As a more complex example, this job specification component only enables a
+<p>As a more complex example, this job specification fragment only enables a
 job if it has not run successfully in the last 4 hours:</p>
 <div class="language-json highlight"><pre><span></span><code><span id="__span-2-1"><span class="p">{</span>
 </span><span id="__span-2-2"><span class="w">  </span><span class="nt">&quot;schedule&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;30 * * * *&quot;</span><span class="p">,</span>
@@ -1451,13 +1450,13 @@ field of the event record.</p>
 </tr>
 </tbody>
 </table>
-<p>As an example, the following job specification component would record the value
+<p>As an example, the following job specification fragment would record the value
 of a specific global.</p>
 <div class="language-json highlight"><pre><span></span><code><span id="__span-3-1"><span class="p">{</span>
 </span><span id="__span-3-2"><span class="w">  </span><span class="nt">&quot;event_log&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;The value of global g1 is &#39;{{ globals.g1 }}&#39;&quot;</span>
 </span><span id="__span-3-3"><span class="p">}</span>
 </span></code></pre></div>
-<p>This component would record two globals in a map format:</p>
+<p>This fragment would record two globals in a map format:</p>
 <div class="language-json highlight"><pre><span></span><code><span id="__span-4-1"><span class="p">{</span>
 </span><span id="__span-4-2"><span class="w">  </span><span class="nt">&quot;event_log&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-4-3"><span class="w">    </span><span class="nt">&quot;g1&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;{{ globals.g1 }}&quot;</span><span class="p">,</span>
@@ -1465,7 +1464,7 @@ of a specific global.</p>
 </span><span id="__span-4-5"><span class="w">  </span><span class="p">}</span>
 </span><span id="__span-4-6"><span class="p">}</span>
 </span></code></pre></div>
-<p>This component would record all of the globals (as a Python object converted to
+<p>This fragment would record all of the globals (as a Python object converted to
 a string):</p>
 <div class="language-json highlight"><pre><span></span><code><span id="__span-5-1"><span class="p">{</span>
 </span><span id="__span-5-2"><span class="w">  </span><span class="nt">&quot;event_log&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;{{ globals }}&#39;&quot;</span>
@@ -1479,8 +1478,7 @@ information.</p>
 <h2 id="the-connections-table">The Connections Table<a class="headerlink" href="#the-connections-table" title="Permanent link">&para;</a></h2>
 <p>The connections table for a given <code>&lt;REALM&gt;</code> is named <code>lava.&lt;REALM&gt;.connections</code>.
 It contains information to assist job handlers make connections to external
-resources, typically databases. Connection specifications contain the following
-fields.</p>
+resources, typically databases.</p>
 <table>
 <thead>
 <tr>
@@ -1544,7 +1542,6 @@ utility <code>lava-events</code> is provided to assist with this. Get help thus:
 </span></code></pre></div>
 <p>The <a href="10-installation-operation.html#the-lava-gui">lava GUI</a> also provides the ability to query
 the events table.</p>
-<p>Event records contain the following fields.</p>
 <table>
 <thead>
 <tr>
@@ -1629,14 +1626,13 @@ the events table.</p>
 </tr>
 </tbody>
 </table>
-<h2 id="the-s3triggers-table">The s3triggers Table<a class="headerlink" href="#the-s3triggers-table" title="Permanent link">&para;</a></h2>
+<h2 id="the-s3triggers-table">The S3triggers Table<a class="headerlink" href="#the-s3triggers-table" title="Permanent link">&para;</a></h2>
 <p>The s3triggers table for a given <code>&lt;REALM&gt;</code> is named <code>lava.&lt;REALM&gt;.s3triggers</code>.
 It is used to map S3 bucket events to jobs. When an S3 event occurs with a
 bucket and object prefix matching an entry in the table, the corresponding lava
 job is dispatched. See
 <a href="05-job-dispatch.html#dispatching-jobs-from-s3-events">Triggering Jobs from S3 Events</a>
 for more information.</p>
-<p>S3trigger specifications contain the following fields.</p>
 <table>
 <thead>
 <tr>
@@ -1764,7 +1760,6 @@ can be accessed by authorised external actors or other lava jobs.</p>
 <p>Creation and reading of entries in the state table are managed by the lava
 <a href="09-lava-state-manager.html#the-lava-state-manager">state manager</a>. Other tools should not be used for this
 purpose.</p>
-<p>State records contain the following fields.</p>
 <table>
 <thead>
 <tr>

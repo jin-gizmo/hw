@@ -1034,7 +1034,7 @@
   
 
 
-<h1 id="lava-architecture">Lava Architecture<a class="headerlink" href="#lava-architecture" title="Permanent link">&para;</a></h1>
+<h1 id="lava-architecture" x-nav="Architecture">Lava Architecture<a class="headerlink" href="#lava-architecture" title="Permanent link">&para;</a></h1>
 <p>Each lava realm has the following components:</p>
 <ul>
 <li>
@@ -1105,7 +1105,7 @@ templates</a>.</p>
 <p>A lava worker is any Linux node running the worker code bundle. The worker
 is multi-threaded and can be run interactively, in batch mode or as a daemon.</p>
 <p>One Linux instance can run multiple workers from the same or different worker
-fleets if required. While it is possible to run workers from different realms on
+fleets, if required. While it is possible to run workers from different realms on
 the one AWS EC2 instance, this is not recommended as it means the different
 realms would be sharing an IAM instance role.</p>
 <p>The <a href="10-installation-operation.html#lava-installation-and-operation">CloudFormation templates</a>

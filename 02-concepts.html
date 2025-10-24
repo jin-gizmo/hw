@@ -997,7 +997,7 @@ dedicated <a href="04-dynamodb-tables.html#dynamodb-tables">configuration tables
 <h2 id="jobs">Jobs<a class="headerlink" href="#jobs" title="Permanent link">&para;</a></h2>
 <p>A job is a lava unit of work. Jobs are sent by a <em>dispatcher</em> to <em>workers</em>,
 either on demand, based on a cron style schedule, in response to an S3 bucket
-notification event or in response to an Amazon EventBridge event. Each
+notification event, or in response to an Amazon EventBridge event. Each
 invocation of a job is a <em>job run</em> and is assigned a UUID. This UUID is used in
 the naming of job outputs in S3 and in event logging.  Various job types are
 supported, depending on the kind of processing required.</p>
@@ -1047,7 +1047,7 @@ the <em>realm</em>.</p>
 <h2 id="actions">Actions<a class="headerlink" href="#actions" title="Permanent link">&para;</a></h2>
 <p>For each <em>job</em>, it is possible to specify actions that are to be performed when
 the <em>job</em> completes, fails or retries. Actions include things such as
-dispatching other jobs or sending messages via SQS, SNS, SES etc.</p>
+dispatching other jobs or sending messages via SQS, SNS, email etc.</p>
 
 
 
