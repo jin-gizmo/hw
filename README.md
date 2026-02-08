@@ -21,20 +21,8 @@ a single AWK script.
 [![GitHub License](https://img.shields.io/github/license/jin-gizmo/makehelp)](https://github.com/jin-gizmo/makehelp/blob/master/LICENCE.txt)
 
 ---
-<!-- ts min=2; max=2; style=linear; -->
-[Prerequisites](#prerequisites) &bull;
-[Getting&nbsp;Started](#getting-started) &bull;
-[The&nbsp;Basics](#the-basics) &bull;
-[Going&nbsp;Further](#going-further) &bull;
-[Getting&nbsp;Fancy](#getting-fancy) &bull;
-[Odds&nbsp;and&nbsp;Ends](#odds-and-ends) &bull;
-[Directives](#directives) &bull;
-[Vars&nbsp;used&nbsp;by&nbsp;MakeHelp](#make-variables-used-by-makehelp) &bull;
-[Editor&nbsp;Support](#editor-support-for-makehelp) &bull;
-[Limitations](#caveats-and-limitations) &bull;
-[Release&nbsp;Notes](#release-notes) &bull;
-[More&nbsp;Gizmos](#more-gizmos)
-<!-- te -->
+<!-- toc-start min=2; max=2; style=linear; -->
+<!-- toc-end -->
 ---
 
 ## Features
