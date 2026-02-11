@@ -19,7 +19,7 @@ jobs:
 
       - name: Update README TOC
         id: toc
-        uses: jin-gizmo/tocmark@v1
+        uses: jin-gizmo/tocmark.stg@v1
         with:
           file: README.md
 
