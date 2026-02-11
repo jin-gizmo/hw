@@ -23,7 +23,6 @@ a single AWK script.
 ---
 <!-- toc-start min=2; max=2; style=linear; -->
 
-
 <!-- toc-end -->
 ---
 
